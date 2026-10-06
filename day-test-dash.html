@@ -1,32 +1,75 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
-<title>Day Test 1.3.1 · 1600199066</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<meta name="robots" content="noindex">
+<title>Day Test dashboard · synced Mon Oct 5 2026, 8:37 PM ET</title><link rel="icon" href="data:,">
 <style>
-body{margin:0;background:#070a14;color:#e8eefc;font-family:system-ui,Arial;padding:18px;max-width:720px;margin:auto}
-h1{color:#ffc400;font-size:26px;margin:0 0 4px}.sub{color:#9fb4e0;margin:0 0 16px;font-size:14px}
-.card{background:#12182a;border:1px solid #24304a;border-radius:14px;padding:16px;margin:0 0 12px}
-.k{color:#9fb4e0;font-size:13px}.v{font-size:30px;font-weight:700}.neg{color:#ff5a5a}.pos{color:#2ee68a}.mut{color:#9fb4e0}
-.row{display:flex;gap:12px;flex-wrap:wrap}.row .card{flex:1;min-width:140px}
-.bar{height:12px;background:#24304a;border-radius:6px;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:#ff5a5a}
-.tag{display:inline-block;padding:4px 10px;border-radius:20px;background:#3a1a1a;color:#ff8a8a;font-weight:700;font-size:13px}
+:root{color-scheme:dark}
+body{margin:0 auto;background:#070a14;color:#e8eefc;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;padding:14px;max-width:760px}
+h1{color:#ffc400;font-size:24px;margin:0} h2{font-size:19px;margin:0} h3{font-size:13px;color:#9fb4e0;font-weight:600;margin:14px 0 4px;text-transform:uppercase;letter-spacing:.04em}
+.top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.sync{font-size:13px;color:#cfe0ff;background:#12182a;border:1px solid #24304a;border-radius:20px;padding:4px 10px}
+.card{background:#12182a;border:1px solid #24304a;border-radius:14px;padding:14px;margin:0 0 12px}
+.hd{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.k{color:#9fb4e0;font-size:13px;line-height:1.45} .v{font-size:26px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.st{background:#0d1222;border:1px solid #1d2740;border-radius:10px;padding:8px 10px;min-width:0}
+@media (max-width:560px){.grid{grid-template-columns:repeat(2,1fr)} .v{font-size:22px}}
+.pos{color:#2ee68a} .neg{color:#ff5a5a} .mut{color:#9fb4e0}
+.tag{display:inline-block;padding:3px 9px;border-radius:20px;font-weight:700;font-size:11px;background:#1d2740}
+.tag.neg{background:#3a1a1a;color:#ff8a8a} .tag.amb{background:#3a2e10;color:#ffc94d} .tag.mutg{background:#1d2740;color:#9fb4e0}
+.live div{margin:3px 0;font-size:14px}
+.sh{margin:8px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px} td,th{padding:4px 6px;border-bottom:1px solid #1d2740;text-align:left} th{color:#9fb4e0;font-weight:600}
+.acct{font-size:13px;color:#9fb4e0;margin:4px 2px 10px}
 .note{color:#7f8db0;font-size:12px}
 </style></head><body>
-<h1>Day Test 1.3.1</h1>
-<p class=sub>FTMO trial 1600199066 · OANDA-Demo-1 · read-only snapshot, data as of Mon Oct 5 2026, 1:12 PM ET</p>
-<div class=card><span class=tag>CLOSED · ARCHIVED · FLAT</span> <span class=mut>&nbsp;Placing off until Owner GO</span></div>
-<div class=card><div class=k>Closed P/L (this test, from $0)</div><div class="v neg">−$160.17</div>
-<div class=k>vs daily goal +$1,000 · −16.0%</div><div class=bar><i style="width:0"></i></div></div>
-<div class=row>
-<div class=card><div class=k>Trades</div><div class=v>7</div><div class=k>4 wins · 3 losses</div></div>
-<div class=card><div class=k>Win rate</div><div class="v pos">+57%</div></div>
-<div class=card><div class=k>Open</div><div class=v>0</div><div class=k>+$0.00 at risk</div></div>
-</div>
-<div class=row>
-<div class=card><div class=k>Weekly goal +$5,000</div><div class="v neg">−3.2%</div></div>
-<div class=card><div class=k>Last trade</div><div class="v neg" style="font-size:22px">−$91.82</div><div class=k>USDCHF sell · 1:56 AM ET</div></div>
-</div>
-<div class=card><div class=k>Account (secondary)</div><div style="font-size:20px">$199,839.83 <span class=mut>· started 10/4 7:58 PM ET from $200,000</span></div></div>
-<div class=card><div class=k>What's next (shadow only, no orders)</div>
-<div>N6 month-end FX: watching Fri Oct 30 (no signal yet, S&amp;P +1.6% MTD &lt; 2.5%)</div>
-<div>N34 month-start FX fade: next event Mon Nov 2</div></div>
-<p class=note>Static snapshot. No controls, no passcode.</p>
+<div class="top"><h1>Trading tests · public dashboard</h1><span class="sync">Synced Mon Oct 5 2026, 8:37 PM ET</span></div>
+<section class="card live">
+ <div class="hd"><h2>Running now</h2></div>
+ <div>Real-money / broker test: <b class="neg">none running</b> · placing <b class="neg">OFF</b> <span class="k">(CLOSED - ARCHIVED)</span></div>
+ <div>DT22 BTC paper logger: <b class="pos">running</b> (paper only, no orders)</div>
+ <div>Shadows: N6 next Fri Oct 30 · N34 next Mon Nov 2 <span class="k">(log only)</span></div>
+</section>
+
+<section class="card">
+ <div class="hd"><h2>Day Test 1.3.1</h2><span class="tag neg">CLOSED · ARCHIVED · FLAT</span></div>
+ <div class="k">FTMO trial · OANDA-Demo-1 · started Sun 10/4 7:58 PM ET from $200,000.00 · source: live records</div>
+ <div class="grid">
+  <div class="st"><div class="k">Closed P/L</div><div class="v neg">−$160.17</div><div class=k>from $0 at test start</div></div>
+  <div class="st"><div class="k">Trades</div><div class="v ">7</div><div class=k>4 W · 3 L</div></div>
+  <div class="st"><div class="k">Win rate</div><div class="v pos">57%</div></div>
+  <div class="st"><div class="k">Open</div><div class="v ">0</div><div class=k>positions</div></div>
+ </div>
+ <div class="k" style="margin-top:6px">Last trade: <b class="neg">−$91.82</b> · USDCHF sell · closed Mon 10/5 1:56 AM ET</div>
+ <h3>Cumulative closed P/L per trade</h3>
+ <svg viewBox="0 0 640 220" width="100%" role="img" aria-label="Day Test cumulative closed P/L" preserveAspectRatio="xMidYMid meet" style="display:block"><line x1="58" x2="626" y1="190.0" y2="190.0" stroke="#24304a" stroke-width="1"/><text x="52" y="194.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$173</text><line x1="58" x2="626" y1="146.0" y2="146.0" stroke="#24304a" stroke-width="1"/><text x="52" y="150.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$127</text><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#24304a" stroke-width="1"/><text x="52" y="106.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$80</text><line x1="58" x2="626" y1="58.0" y2="58.0" stroke="#24304a" stroke-width="1"/><text x="52" y="62.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$34</text><line x1="58" x2="626" y1="14.0" y2="14.0" stroke="#24304a" stroke-width="1"/><text x="52" y="18.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$13</text><line x1="58" x2="626" y1="26.1" y2="26.1" stroke="#5a6b90" stroke-width="1.2" stroke-dasharray="4 3"/><polygon points="58.0,26.1 58.0,26.1 139.1,103.9 220.3,82.7 301.4,65.8 382.6,36.5 463.7,102.4 544.9,90.9 626.0,177.9 626.0,26.1" fill="#ff5a5a" fill-opacity="0.12"/><polyline points="58.0,26.1 139.1,103.9 220.3,82.7 301.4,65.8 382.6,36.5 463.7,102.4 544.9,90.9 626.0,177.9" fill="none" stroke="#ff5a5a" stroke-width="2.5" stroke-linejoin="round"/><circle cx="58.0" cy="26.1" r="3.5" fill="#9fb4e0"><title>start: ±$0.00</title></circle><text x="58.0" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">start</text><circle cx="139.1" cy="103.9" r="3.5" fill="#ff5a5a"><title>#1: −$82.14</title></circle><text x="139.1" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#1</text><circle cx="220.3" cy="82.7" r="3.5" fill="#ff5a5a"><title>#2: −$59.69</title></circle><text x="220.3" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#2</text><circle cx="301.4" cy="65.8" r="3.5" fill="#ff5a5a"><title>#3: −$41.89</title></circle><text x="301.4" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#3</text><circle cx="382.6" cy="36.5" r="3.5" fill="#ff5a5a"><title>#4: −$10.92</title></circle><text x="382.6" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#4</text><circle cx="463.7" cy="102.4" r="3.5" fill="#ff5a5a"><title>#5: −$80.49</title></circle><text x="463.7" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#5</text><circle cx="544.9" cy="90.9" r="3.5" fill="#ff5a5a"><title>#6: −$68.35</title></circle><text x="544.9" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#6</text><circle cx="626.0" cy="177.9" r="3.5" fill="#ff5a5a"><title>#7: −$160.17</title></circle><text x="626.0" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#7</text><text x="622.0" y="168.9" text-anchor="end" font-size="13" font-weight="700" fill="#ff5a5a">−$160.17</text></svg>
+ <h3>P/L per trade</h3>
+ <svg viewBox="0 0 640 220" width="100%" role="img" aria-label="Day Test P/L per trade" preserveAspectRatio="xMidYMid meet" style="display:block"><line x1="58" x2="626" y1="190.0" y2="190.0" stroke="#24304a" stroke-width="1"/><text x="52" y="194.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$102</text><line x1="58" x2="626" y1="146.0" y2="146.0" stroke="#24304a" stroke-width="1"/><text x="52" y="150.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$66</text><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#24304a" stroke-width="1"/><text x="52" y="106.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$30</text><line x1="58" x2="626" y1="58.0" y2="58.0" stroke="#24304a" stroke-width="1"/><text x="52" y="62.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$5</text><line x1="58" x2="626" y1="14.0" y2="14.0" stroke="#24304a" stroke-width="1"/><text x="52" y="18.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$41</text><line x1="58" x2="626" y1="64.4" y2="64.4" stroke="#5a6b90" stroke-width="1.2" stroke-dasharray="4 3"/><rect x="73.4" y="64.4" width="50.3" height="101.5" rx="3" fill="#ff5a5a"><title>#1 USDJPY sell Sun 10/4 10:10 PM ET: −$82.14</title></rect><text x="98.6" y="179.9" text-anchor="middle" font-size="11" fill="#ff5a5a">−82</text><text x="98.6" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#1</text><rect x="154.6" y="36.7" width="50.3" height="27.7" rx="3" fill="#2ee68a"><title>#2 USDJPY buy Sun 10/4 10:48 PM ET: +$22.45</title></rect><text x="179.7" y="31.7" text-anchor="middle" font-size="11" fill="#2ee68a">+22</text><text x="179.7" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#2</text><rect x="235.7" y="42.4" width="50.3" height="22.0" rx="3" fill="#2ee68a"><title>#3 USDCAD buy Sun 10/4 11:56 PM ET: +$17.80</title></rect><text x="260.9" y="37.4" text-anchor="middle" font-size="11" fill="#2ee68a">+18</text><text x="260.9" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#3</text><rect x="316.8" y="26.1" width="50.3" height="38.3" rx="3" fill="#2ee68a"><title>#4 USDJPY buy Mon 10/5 12:23 AM ET: +$30.97</title></rect><text x="342.0" y="21.1" text-anchor="middle" font-size="11" fill="#2ee68a">+31</text><text x="342.0" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#4</text><rect x="398.0" y="64.4" width="50.3" height="86.0" rx="3" fill="#ff5a5a"><title>#5 EURUSD sell Mon 10/5 12:51 AM ET: −$69.57</title></rect><text x="423.1" y="164.4" text-anchor="middle" font-size="11" fill="#ff5a5a">−70</text><text x="423.1" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#5</text><rect x="479.1" y="49.4" width="50.3" height="15.0" rx="3" fill="#2ee68a"><title>#6 EURUSD buy Mon 10/5 1:11 AM ET: +$12.14</title></rect><text x="504.3" y="44.4" text-anchor="middle" font-size="11" fill="#2ee68a">+12</text><text x="504.3" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#6</text><rect x="560.3" y="64.4" width="50.3" height="113.5" rx="3" fill="#ff5a5a"><title>#7 USDCHF sell Mon 10/5 1:56 AM ET: −$91.82</title></rect><text x="585.4" y="191.9" text-anchor="middle" font-size="11" fill="#ff5a5a">−92</text><text x="585.4" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#7</text></svg>
+ <table><tr><th>#</th><th>Trade</th><th>Closed</th><th style="text-align:right">P/L</th></tr>
+ <tr><td>1</td><td>USDJPY sell 0.6</td><td>Sun 10/4 10:10 PM ET</td><td class="neg" style="text-align:right">−$82.14</td></tr><tr><td>2</td><td>USDJPY buy 0.68</td><td>Sun 10/4 10:48 PM ET</td><td class="pos" style="text-align:right">+$22.45</td></tr><tr><td>3</td><td>USDCAD buy 1.51</td><td>Sun 10/4 11:56 PM ET</td><td class="pos" style="text-align:right">+$17.80</td></tr><tr><td>4</td><td>USDJPY buy 1.04</td><td>Mon 10/5 12:23 AM ET</td><td class="pos" style="text-align:right">+$30.97</td></tr><tr><td>5</td><td>EURUSD sell 0.47</td><td>Mon 10/5 12:51 AM ET</td><td class="neg" style="text-align:right">−$69.57</td></tr><tr><td>6</td><td>EURUSD buy 0.45</td><td>Mon 10/5 1:11 AM ET</td><td class="pos" style="text-align:right">+$12.14</td></tr><tr><td>7</td><td>USDCHF sell 1.17</td><td>Mon 10/5 1:56 AM ET</td><td class="neg" style="text-align:right">−$91.82</td></tr>
+ </table>
+</section>
+
+<section class="card">
+ <div class="hd"><h2>DT22 BTC paper</h2><span class="tag amb">PAPER ONLY · FAILED-BACKTEST · observation</span></div>
+ <div class="k">Polymarket BTC Up/Down 15m forward paper log · no orders anywhere · logger <b class="pos">running</b> · heartbeat 0 min ago</div>
+ <div class="grid">
+  <div class="st"><div class="k">Closed paper P/L</div><div class="v mut">±$0.00</div><div class=k>notional</div></div>
+  <div class="st"><div class="k">Trades</div><div class="v ">0</div><div class=k>0 W</div></div>
+  <div class="st"><div class="k">Win rate</div><div class="v ">—</div></div>
+  <div class="st"><div class="k">Bankroll</div><div class="v ">$1,000.00</div><div class=k>from $1,000.00</div></div>
+ </div>
+ <div class="k" style="margin-top:6px">Next selected window: <b>Mon 10/5 9:30 PM ET</b> · open paper: 0</div>
+ <h3>Paper equity (P/L vs $1,000.00)</h3>
+ <svg viewBox="0 0 640 220" width="100%" role="img" aria-label="DT22 paper equity" preserveAspectRatio="xMidYMid meet" style="display:block"><line x1="58" x2="626" y1="190.0" y2="190.0" stroke="#24304a" stroke-width="1"/><text x="52" y="194.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$1</text><line x1="58" x2="626" y1="146.0" y2="146.0" stroke="#24304a" stroke-width="1"/><text x="52" y="150.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$0</text><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#24304a" stroke-width="1"/><text x="52" y="106.0" text-anchor="end" font-size="11" fill="#9fb4e0">$0</text><line x1="58" x2="626" y1="58.0" y2="58.0" stroke="#24304a" stroke-width="1"/><text x="52" y="62.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$0</text><line x1="58" x2="626" y1="14.0" y2="14.0" stroke="#24304a" stroke-width="1"/><text x="52" y="18.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$1</text><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#5a6b90" stroke-width="1.2" stroke-dasharray="4 3"/><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#9fb4e0" stroke-width="2.5"/><text x="342.0" y="90.0" text-anchor="middle" font-size="14" fill="#9fb4e0">no trades yet</text></svg>
+</section>
+
+<section class="card">
+ <div class="hd"><h2>Shadows</h2><span class="tag mutg">SHADOW ONLY · NO ORDERS</span></div>
+ <div class="sh"><b>N6 month-end FX</b> — next <b>Fri Oct 30</b><div class="k">last check Mon 10/5 5:37 PM ET · S&amp;P MTD <b class="pos">+1.60%</b> (needs ±2.5%) · signal: <b>no signal yet</b> · event runner: <b class="neg">armed earlier, not running now</b></div></div>
+ <div class="sh"><b>N34 month-start FX fade</b> — next <b>Mon Nov 2</b><div class="k">last check Mon 10/5 3:31 PM ET · signal: <b>no signal yet</b> · event runner: not armed</div></div>
+</section>
+<div class="acct">Account (secondary): <b>$199,839.83</b> <span class="neg">(−$160.17 vs $200,000.00 start)</span> · last broker snapshot Mon 10/5 1:12 PM ET</div>
+<p class="note">Read-only snapshot rebuilt about every 15 minutes from local records; this page reloads every 5 minutes. Green = positive, red = negative. No controls. Missing sources: DT22 ledger.csv (file not created yet = no paper trades)</p>
 </body></html>
