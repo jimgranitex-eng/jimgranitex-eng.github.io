@@ -29,7 +29,7 @@ table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px} td,th{p
 <label><input type="checkbox" id="auto" onchange="setAuto(this.checked)"> Auto-refresh every 60 s</label>
 <span class="k" id="cd"></span></div>
 <script>
-const SYNC_MS = 1791316970012;
+const SYNC_MS = 1791316972640;
 function hardReload(){ const u = new URL(location.href); u.searchParams.set('t', Date.now()); location.replace(u.toString()); }
 function setAuto(v){ localStorage.setItem('dashAuto', v ? '1' : '0'); left = 60; }
 let left = 60;
