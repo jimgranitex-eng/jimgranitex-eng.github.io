@@ -24,12 +24,12 @@ table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px} td,th{p
 .note{color:#7f8db0;font-size:12px}
 .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 10px;font-size:14px} .bar button{background:#2ee68a;color:#04130a;border:0;border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px;cursor:pointer}
 </style></head><body>
-<div class="top"><h1>Active tests</h1><span class="sync">Synced Tue Oct 6 2026, 9:34 PM ET · <span id="ago"></span></span></div>
+<div class="top"><h1>Active tests</h1><span class="sync">Synced Tue Oct 6 2026, 9:39 PM ET · <span id="ago"></span></span></div>
 <div class="bar"><button id="rf" onclick="hardReload()">↻ Refresh now</button>
 <label><input type="checkbox" id="auto" onchange="setAuto(this.checked)"> Auto-refresh every 60 s</label>
 <span class="k" id="cd"></span></div>
 <script>
-const SYNC_MS = 1791336882413;
+const SYNC_MS = 1791337183864;
 function hardReload(){ const u = new URL(location.href); u.searchParams.set('t', Date.now()); location.replace(u.toString()); }
 function setAuto(v){ localStorage.setItem('dashAuto', v ? '1' : '0'); left = 60; }
 let left = 60;
@@ -48,8 +48,8 @@ tick(); setInterval(tick, 1000);
  <div class="hd"><h2>All tests right now</h2><span class="k">from $0 at each test's start</span></div>
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v neg">−$0.39</div><div class=k>3 closed trade(s)</div></div>
-  <div class="st"><div class="k">Open P/L (floating)</div><div class="v pos">+$0.90</div><div class=k>2 open trade(s)</div></div>
-  <div class="st"><div class="k">Total if closed now</div><div class="v pos">+$0.51</div><div class=k>closed + open</div></div>
+  <div class="st"><div class="k">Open P/L (floating)</div><div class="v pos">+$0.99</div><div class=k>2 open trade(s)</div></div>
+  <div class="st"><div class="k">Total if closed now</div><div class="v pos">+$0.60</div><div class=k>closed + open</div></div>
   <div class="st"><div class="k">Status</div><div class="v pos">OPEN</div><div class=k>trades running</div></div>
  </div>
  
@@ -66,15 +66,15 @@ tick(); setInterval(tick, 1000);
  </div>
  <div class="k" style="margin-top:6px">Take-home formula: max(0, closed P/L) × 80% trader share (FTMO 2-Step funded public split; may scale to 90%). Challenge/Verification/demo are not paid. US tax unknown — pre-tax only.</div>
  <h3>Open trades</h3>
- <table><tr><th>Test</th><th>Pair</th><th>Side</th><th>P/L now</th><th>Opened</th></tr><tr><td>Micro Test 3</td><td>EURUSD</td><td>buy</td><td class="pos"><b>+$0.38</b></td><td>Tue 10/6 4:01 AM ET</td></tr><tr><td>Micro Test 3</td><td>AUDUSD</td><td>buy</td><td class="pos"><b>+$0.52</b></td><td>Tue 10/6 4:01 AM ET</td></tr></table>
+ <table><tr><th>Test</th><th>Pair</th><th>Side</th><th>P/L now</th><th>Opened</th></tr><tr><td>Micro Test 3</td><td>EURUSD</td><td>buy</td><td class="pos"><b>+$0.39</b></td><td>Tue 10/6 4:01 AM ET</td></tr><tr><td>Micro Test 3</td><td>AUDUSD</td><td>buy</td><td class="pos"><b>+$0.60</b></td><td>Tue 10/6 4:01 AM ET</td></tr></table>
  <h3>By test</h3>
- <table><tr><th>Test</th><th>Closed</th><th>Open</th><th># open</th><th># closed</th></tr><tr><td>Micro Test 1</td><td class="mut"><b>±$0.00</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>0</td></tr><tr><td>Micro Test 2</td><td class="neg"><b>−$0.30</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>2</td></tr><tr><td>Micro Test 3</td><td class="mut"><b>±$0.00</b></td><td class="pos"><b>+$0.90</b></td><td>2</td><td>0</td></tr><tr><td>Micro Test 4</td><td class="neg"><b>−$0.09</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>1</td></tr></table>
+ <table><tr><th>Test</th><th>Closed</th><th>Open</th><th># open</th><th># closed</th></tr><tr><td>Micro Test 1</td><td class="mut"><b>±$0.00</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>0</td></tr><tr><td>Micro Test 2</td><td class="neg"><b>−$0.30</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>2</td></tr><tr><td>Micro Test 3</td><td class="mut"><b>±$0.00</b></td><td class="pos"><b>+$0.99</b></td><td>2</td><td>0</td></tr><tr><td>Micro Test 4</td><td class="neg"><b>−$0.09</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>1</td></tr></table>
 </section>
-<div class="acct">Account 1600199066: balance <b>$199,839.38</b> · equity <b>$199,840.40</b> · as of Tue 10/6 9:33 PM ET</div>
+<div class="acct">Account 1600199066: balance <b>$199,839.38</b> · equity <b>$199,840.36</b> · as of Tue 10/6 9:38 PM ET</div>
 
 <section class="card" style="border-color:#ffc400">
  <div class="hd"><h2>Active test: Micro Test 1 (N30)</h2><span class="tag" style="background:#12351f;color:#2ee68a">LIVE · ARMED</span></div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · N30 mid-month long US500 + US100, smallest size (0.10 units) · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Tue 10/6 9:33 PM ET</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · N30 mid-month long US500 + US100, smallest size (0.10 units) · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Tue 10/6 9:38 PM ET</div>
  
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v mut">±$0.00</div><div class=k>from $0 at test start</div></div>
@@ -89,7 +89,7 @@ tick(); setInterval(tick, 1000);
 
 <section class="card" style="border-color:#4da3ff">
  <div class="hd"><h2>Active test: Micro Test 2 (C3 FX intraday momentum)</h2><span class="tag" style="background:#12351f;color:#2ee68a">LIVE · ARMED</span></div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 6 FX majors, 0.01 lot, max 2 open · daily 2:00 PM ET entry on the 17:00→14:00 move (≥ 0.5 ATR), exit 4:30 PM ET, broker SL every order · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Tue 10/6 9:34 PM ET</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 6 FX majors, 0.01 lot, max 2 open · daily 2:00 PM ET entry on the 17:00→14:00 move (≥ 0.5 ATR), exit 4:30 PM ET, broker SL every order · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Tue 10/6 9:39 PM ET</div>
  
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v neg">−$0.30</div><div class=k>from $0 at test start</div></div>
@@ -105,15 +105,15 @@ tick(); setInterval(tick, 1000);
 
 <section class="card" style="border-color:#b38cff">
  <div class="hd"><h2>Active test: Micro Test 3 (anytime FX)</h2><span class="tag" style="background:#12351f;color:#2ee68a">LIVE · ARMED</span></div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 6 FX majors, 0.01 lot, max 2 open · trades any hour FX is open: H1 24-bar breakout with EMA50 trend, SL 2×ATR, TP 2×SL, 24 h time stop · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Tue 10/6 9:34 PM ET</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 6 FX majors, 0.01 lot, max 2 open · trades any hour FX is open: H1 24-bar breakout with EMA50 trend, SL 2×ATR, TP 2×SL, 24 h time stop · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Tue 10/6 9:39 PM ET</div>
  
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v mut">±$0.00</div><div class=k>from $0 at test start</div></div>
-  <div class="st"><div class="k">Open P/L (floating)</div><div class="v pos">+$0.90</div><div class=k>2 open trade(s)</div></div>
+  <div class="st"><div class="k">Open P/L (floating)</div><div class="v pos">+$0.99</div><div class=k>2 open trade(s)</div></div>
   <div class="st"><div class="k">Trades</div><div class="v ">0</div><div class=k>0 W · 0 L</div></div>
   <div class="st"><div class="k">Next signal</div><div class="v ">Tue 10/6 10:01 PM ET</div><div class=k>checked every H1 close</div></div>
  </div>
- <div class="k" style="margin-top:6px">Open now: EURUSD buy <b class="pos">+$0.38</b>, AUDUSD buy <b class="pos">+$0.52</b></div>
+ <div class="k" style="margin-top:6px">Open now: EURUSD buy <b class="pos">+$0.39</b>, AUDUSD buy <b class="pos">+$0.60</b></div>
  <div class="k" style="margin-top:6px">Stop rule (pause at −$150 closed or 5 losses in a row): <b class="pos">OK</b> · room $150.00 to −$150 · 5 of 5 losses left (streak 0)</div>
  <h3>Cumulative closed P/L per trade</h3>
  <svg viewBox="0 0 640 220" width="100%" role="img" aria-label="Micro Test 3 cumulative closed P/L" preserveAspectRatio="xMidYMid meet" style="display:block"><line x1="58" x2="626" y1="190.0" y2="190.0" stroke="#24304a" stroke-width="1"/><text x="52" y="194.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$1</text><line x1="58" x2="626" y1="146.0" y2="146.0" stroke="#24304a" stroke-width="1"/><text x="52" y="150.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$0</text><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#24304a" stroke-width="1"/><text x="52" y="106.0" text-anchor="end" font-size="11" fill="#9fb4e0">$0</text><line x1="58" x2="626" y1="58.0" y2="58.0" stroke="#24304a" stroke-width="1"/><text x="52" y="62.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$0</text><line x1="58" x2="626" y1="14.0" y2="14.0" stroke="#24304a" stroke-width="1"/><text x="52" y="18.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$1</text><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#5a6b90" stroke-width="1.2" stroke-dasharray="4 3"/><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#9fb4e0" stroke-width="2.5"/><text x="342.0" y="90.0" text-anchor="middle" font-size="14" fill="#9fb4e0">no closed trades yet</text></svg>
@@ -121,7 +121,7 @@ tick(); setInterval(tick, 1000);
 
 <section class="card" style="border-color:#2ee68a">
  <div class="hd"><h2>Active test: Micro Test 4 (Consistency v4)</h2><span class="tag" style="background:#12351f;color:#2ee68a">LIVE · ARMED</span></div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · never close red: per-trade trail floor at 75% of peak floating P/L, only green exits · H1 Donchian-24 + EMA50 entry, 0.01 lot, max 2 open · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Tue 10/6 9:34 PM ET</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · never close red: per-trade trail floor at 75% of peak floating P/L, only green exits · H1 Donchian-24 + EMA50 entry, 0.01 lot, max 2 open · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Tue 10/6 9:39 PM ET</div>
  
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v neg">−$0.09</div><div class=k>from $0 at test start</div></div>
