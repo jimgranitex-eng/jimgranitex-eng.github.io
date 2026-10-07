@@ -27,12 +27,12 @@ table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px} td,th{p
 details summary{cursor:pointer;margin-top:6px}
 .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 10px;font-size:14px} .bar button{background:#2ee68a;color:#04130a;border:0;border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px;cursor:pointer}
 </style></head><body>
-<div class="top"><h1>Active tests</h1><span class="sync">Synced Wed Oct 7 2026, 8:48 AM ET · <span id="ago"></span></span></div>
+<div class="top"><h1>Active tests</h1><span class="sync">Synced Wed Oct 7 2026, 8:53 AM ET · <span id="ago"></span></span></div>
 <div class="bar"><button id="rf" onclick="hardReload()">↻ Refresh now</button>
 <label><input type="checkbox" id="auto" onchange="setAuto(this.checked)"> Auto-refresh every 60 s</label>
 <span class="k" id="cd"></span></div>
 <script>
-const SYNC_MS = 1791377320819;
+const SYNC_MS = 1791377622561;
 function hardReload(){ const u = new URL(location.href); u.searchParams.set('t', Date.now()); location.replace(u.toString()); }
 function setAuto(v){ localStorage.setItem('dashAuto', v ? '1' : '0'); left = 60; }
 let left = 60;
@@ -51,15 +51,15 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
 
 <section class="card" style="border-color:#ffc400">
  <div class="hd"><h2>Per-test comparison</h2><span class="k">current versions from their own $0 starts · consistency target 75%</span></div>
- <table><tr><th>Test</th><th>Status</th><th>Closes</th><th>Consistency</th><th>+ : −</th><th>Net closed</th><th>Open P/L (net)</th></tr><tr><td>Micro Test 1 (N30)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>0</td><td class="mut">0/0 · open 0/0 green</td><td>no closes yet</td><td class="mut"><b>±$0.00</b></td><td class="mut"><b>±$0.00</b> <span class="k">(0)</span></td></tr><tr><td>Micro Test 2 (C3)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>2</td><td class="neg">50%</td><td>0.25 : 1</td><td class="neg"><b>−$0.30</b></td><td class="mut"><b>±$0.00</b> <span class="k">(0)</span></td></tr><tr><td>Micro Test 3 (anytime FX)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>2</td><td class="neg">0%</td><td>all red</td><td class="neg"><b>−$3.74</b></td><td class="pos"><b>+$1.67</b> <span class="k">(1)</span></td></tr><tr><td>Consistency v4.2 (micro4)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>1</td><td class="pos">100%</td><td>all green</td><td class="pos"><b>+$1.57</b></td><td class="mut"><b>±$0.00</b> <span class="k">(0)</span></td></tr><tr><td>v4.2-Z wide (micro5)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>1</td><td class="pos">100%</td><td>all green</td><td class="pos"><b>+$0.58</b></td><td class="neg"><b>−$1.64</b> <span class="k">(1)</span></td></tr></table>
+ <table><tr><th>Test</th><th>Status</th><th>Closes</th><th>Consistency</th><th>+ : −</th><th>Net closed</th><th>Open P/L (net)</th></tr><tr><td>Micro Test 1 (N30)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>0</td><td class="mut">0/0 · open 0/0 green</td><td>no closes yet</td><td class="mut"><b>±$0.00</b></td><td class="mut"><b>±$0.00</b> <span class="k">(0)</span></td></tr><tr><td>Micro Test 2 (C3)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>2</td><td class="neg">50%</td><td>0.25 : 1</td><td class="neg"><b>−$0.30</b></td><td class="mut"><b>±$0.00</b> <span class="k">(0)</span></td></tr><tr><td>Micro Test 3 (anytime FX)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>2</td><td class="neg">0%</td><td>all red</td><td class="neg"><b>−$3.74</b></td><td class="pos"><b>+$1.58</b> <span class="k">(1)</span></td></tr><tr><td>Consistency v4.2 (micro4)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>1</td><td class="pos">100%</td><td>all green</td><td class="pos"><b>+$1.57</b></td><td class="mut"><b>±$0.00</b> <span class="k">(0)</span></td></tr><tr><td>v4.2-Z wide (micro5)</td><td><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></td><td>1</td><td class="pos">100%</td><td>all green</td><td class="pos"><b>+$0.58</b></td><td class="neg"><b>−$1.61</b> <span class="k">(1)</span></td></tr></table>
 </section>
 
 <section class="card" style="border-color:#2ee68a">
  <div class="hd"><h2>All tests right now</h2><span class="k">from $0 at each test's start</span></div>
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v neg">−$1.89</div><div class=k>6 closed trade(s)</div></div>
-  <div class="st"><div class="k">Open P/L (net)</div><div class="v pos">+$0.03</div><div class=k>2 open trade(s) · after commission + swap</div></div>
-  <div class="st"><div class="k">Total if closed now</div><div class="v neg">−$1.86</div><div class=k>closed + open</div></div>
+  <div class="st"><div class="k">Open P/L (net)</div><div class="v neg">−$0.03</div><div class=k>2 open trade(s) · after commission + swap</div></div>
+  <div class="st"><div class="k">Total if closed now</div><div class="v neg">−$1.92</div><div class=k>closed + open</div></div>
   <div class="st"><div class="k">Status</div><div class="v pos">OPEN</div><div class=k>trades running</div></div>
  </div>
  
@@ -76,15 +76,15 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  </div>
  <div class="k" style="margin-top:6px">Take-home formula: max(0, closed P/L) × 80% trader share (FTMO 2-Step funded public split; may scale to 90%). Challenge/Verification/demo are not paid. US tax unknown — pre-tax only.</div>
  <h3>Open trades</h3>
- <table><tr><th>Test</th><th>Pair</th><th>Side</th><th>P/L now (net)</th><th>Opened</th></tr><tr><td>Micro Test 3</td><td>EURUSD</td><td>sell</td><td class="pos"><b>+$1.67</b></td><td>Wed 10/7 4:01 AM ET</td></tr><tr><td>v4.2-Z wide (Micro Test 5)</td><td>GBPCHF</td><td>buy</td><td class="neg"><b>−$1.64</b></td><td>Wed 10/7 6:16 AM ET</td></tr></table>
+ <table><tr><th>Test</th><th>Pair</th><th>Side</th><th>P/L now (net)</th><th>Opened</th></tr><tr><td>Micro Test 3</td><td>EURUSD</td><td>sell</td><td class="pos"><b>+$1.58</b></td><td>Wed 10/7 4:01 AM ET</td></tr><tr><td>v4.2-Z wide (Micro Test 5)</td><td>GBPCHF</td><td>buy</td><td class="neg"><b>−$1.61</b></td><td>Wed 10/7 6:16 AM ET</td></tr></table>
  <h3>By test</h3>
- <table><tr><th>Test</th><th>Closed</th><th>Open (net)</th><th># open</th><th># closed</th></tr><tr><td>Micro Test 1</td><td class="mut"><b>±$0.00</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>0</td></tr><tr><td>Micro Test 2</td><td class="neg"><b>−$0.30</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>2</td></tr><tr><td>Micro Test 3</td><td class="neg"><b>−$3.74</b></td><td class="pos"><b>+$1.67</b></td><td>1</td><td>2</td></tr><tr><td>Micro Test 4</td><td class="pos"><b>+$1.57</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>1</td></tr><tr><td>v4.2-Z wide (Micro Test 5)</td><td class="pos"><b>+$0.58</b></td><td class="neg"><b>−$1.64</b></td><td>1</td><td>1</td></tr></table>
+ <table><tr><th>Test</th><th>Closed</th><th>Open (net)</th><th># open</th><th># closed</th></tr><tr><td>Micro Test 1</td><td class="mut"><b>±$0.00</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>0</td></tr><tr><td>Micro Test 2</td><td class="neg"><b>−$0.30</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>2</td></tr><tr><td>Micro Test 3</td><td class="neg"><b>−$3.74</b></td><td class="pos"><b>+$1.58</b></td><td>1</td><td>2</td></tr><tr><td>Micro Test 4</td><td class="pos"><b>+$1.57</b></td><td class="mut"><b>±$0.00</b></td><td>0</td><td>1</td></tr><tr><td>v4.2-Z wide (Micro Test 5)</td><td class="pos"><b>+$0.58</b></td><td class="neg"><b>−$1.61</b></td><td>1</td><td>1</td></tr></table>
 </section>
-<div class="acct">Account 1600199066: balance <b>$199,837.84</b> · equity <b>$199,837.93</b> · as of Wed 10/7 8:48 AM ET</div>
+<div class="acct">Account 1600199066: balance <b>$199,837.84</b> · equity <b>$199,837.98</b> · as of Wed 10/7 8:53 AM ET</div>
 
 <section class="card" style="border-color:#ffc400">
  <div class="hd"><h2>Active test: Micro Test 1 (N30)</h2><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · N30 mid-month long US500 + US100, smallest size (0.10 units) · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:48 AM ET</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · N30 mid-month long US500 + US100, smallest size (0.10 units) · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:53 AM ET</div>
  
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v mut">±$0.00</div><div class=k>from $0 at test start</div></div>
@@ -97,7 +97,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
   <div class="k">no new entries since Wed 10/7 6:49 AM ET</div>
-  <div class="k">Last synced <b>8:48:40 AM ET</b> · runner last check <b class="pos">8:48 AM ET</b> · next check <b>Mon 6:05 PM ET</b></div>
+  <div class="k">Last synced <b>8:53:42 AM ET</b> · runner last check <b class="pos">8:53 AM ET</b> · next check <b>Mon 6:05 PM ET</b></div>
   <div class="k"><b>Consistency:</b> no closed trades yet (0/0) · open now: none</div>
   <div class="grid">
    <div class="st"><div class="k">Consistency (green closes)</div><div class="v mut">no closes yet</div><div class="cbar"><i style="width:0"></i><b title="75% target"></b></div><div class="k">no closed trades yet (0/0) · target 75% · green days 0/0</div><div class="k">open now: none</div></div>
@@ -113,7 +113,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
 
 <section class="card" style="border-color:#4da3ff">
  <div class="hd"><h2>Active test: Micro Test 2 (C3 FX intraday momentum)</h2><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 6 FX majors, 0.01 lot, max 2 open · daily 2:00 PM ET entry on the 17:00→14:00 move (≥ 0.5 ATR), exit 4:30 PM ET, broker SL every order · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:48 AM ET</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 6 FX majors, 0.01 lot, max 2 open · daily 2:00 PM ET entry on the 17:00→14:00 move (≥ 0.5 ATR), exit 4:30 PM ET, broker SL every order · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:53 AM ET</div>
  
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v neg">−$0.30</div><div class=k>from $0 at test start</div></div>
@@ -127,7 +127,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
   <div class="k">no new entries since Wed 10/7 6:49 AM ET</div>
-  <div class="k">Last synced <b>8:48:40 AM ET</b> · runner last check <b class="pos">8:48 AM ET</b> · next check <b>2:00 PM ET</b></div>
+  <div class="k">Last synced <b>8:53:42 AM ET</b> · runner last check <b class="pos">8:53 AM ET</b> · next check <b>2:00 PM ET</b></div>
   
   <div class="grid">
    <div class="st"><div class="k">Consistency (green closes)</div><div class="v neg">50%</div><div class="cbar"><i style="width:50%;background:#ff5a5a"></i><b title="75% target"></b></div><div class="k">1 green / 2 closes · target 75% · 0 green of 1 trading day(s) (0%)</div><div class="k">open now: none</div></div>
@@ -143,29 +143,29 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
 
 <section class="card" style="border-color:#b38cff">
  <div class="hd"><h2>Active test: Micro Test 3 (anytime FX)</h2><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 6 FX majors, 0.01 lot, max 2 open · trades any hour FX is open: H1 24-bar breakout with EMA50 trend, SL 2×ATR, TP 2×SL, 24 h time stop · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:48 AM ET</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 6 FX majors, 0.01 lot, max 2 open · trades any hour FX is open: H1 24-bar breakout with EMA50 trend, SL 2×ATR, TP 2×SL, 24 h time stop · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:53 AM ET</div>
  
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v neg">−$3.74</div><div class=k>from $0 at test start</div></div>
-  <div class="st"><div class="k">Open P/L (floating)</div><div class="v pos">+$1.73</div><div class=k>1 open trade(s)</div></div>
+  <div class="st"><div class="k">Open P/L (floating)</div><div class="v pos">+$1.64</div><div class=k>1 open trade(s)</div></div>
   <div class="st"><div class="k">Trades</div><div class="v ">2</div><div class=k>0 W · 2 L</div></div>
   <div class="st"><div class="k">Next signal</div><div class="v ">no data</div><div class=k>checked every H1 close</div></div>
  </div>
- <div class="k" style="margin-top:6px">Open now: EURUSD sell <b class="pos">+$1.73</b></div>
+ <div class="k" style="margin-top:6px">Open now: EURUSD sell <b class="pos">+$1.64</b></div>
  <div class="k" style="margin-top:6px">Stop rule (pause at −$150 closed or 5 losses in a row): <b class="pos">OK</b> · room $146.26 to −$150 · 3 of 5 losses left (streak 2)</div>
  
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
   <div class="k">no new entries since Wed 10/7 4:11 AM ET; still managing 1 open trade(s)</div>
-  <div class="k">Last synced <b>8:48:40 AM ET</b> · runner last check <b class="pos">8:48 AM ET</b> · next check <b>open trades managed every cycle; no new entries</b></div>
+  <div class="k">Last synced <b>8:53:42 AM ET</b> · runner last check <b class="pos">8:53 AM ET</b> · next check <b>open trades managed every cycle; no new entries</b></div>
   
   <div class="grid">
-   <div class="st"><div class="k">Consistency (green closes)</div><div class="v neg">0%</div><div class="cbar"><i style="width:0%;background:#ff5a5a"></i><b title="75% target"></b></div><div class="k">0 green / 2 closes · target 75% · 0 green of 1 trading day(s) (0%)</div><div class="k">open now: 1 trade(s), +$1.67 (green) · open consistency 1/1 net green (100%)</div></div>
+   <div class="st"><div class="k">Consistency (green closes)</div><div class="v neg">0%</div><div class="cbar"><i style="width:0%;background:#ff5a5a"></i><b title="75% target"></b></div><div class="k">0 green / 2 closes · target 75% · 0 green of 1 trading day(s) (0%)</div><div class="k">open now: 1 trade(s), +$1.58 (green) · open consistency 1/1 net green (100%)</div></div>
    <div class="st"><div class="k">+ : − ratio</div><div class="v neg">all red</div><div class=k>±$0.00 green vs −$3.74 red</div></div>
    <div class="st"><div class="k">Win / Loss</div><div class="v neg">0 W / 2 L</div><div class=k>2 closed trade(s)</div></div>
    <div class="st"><div class="k">Net closed</div><div class="v neg">−$3.74</div><div class=k>−0.0019% of $199,839.83 balance</div></div>
   </div>
-  <div class="k" style="margin-top:6px"><b>Open now</b> (P/L net of commission + swap)</div><table><tr><th>Pair</th><th>Side</th><th>Lot</th><th>Entry</th><th>Open P/L (net)</th></tr><tr><td>EURUSD</td><td>SELL</td><td>0.01</td><td>Wed 10/7 4:01 AM ET</td><td class="pos"><b>+$1.67</b></td></tr></table><div class="k" style="margin-top:6px"><b>Closed</b> (2, most recent first)</div><table><tr><th></th><th>Pair</th><th>Side</th><th>Lot</th><th>Open → Close</th><th>Closed P/L</th></tr><tr><td><span class="neg">●</span></td><td>AUDUSD</td><td>BUY</td><td>0.01</td><td>Tue 10/6 4:01 AM ET → Wed 10/7 3:57 AM ET</td><td class="neg"><b>−$1.39</b></td></tr><tr><td><span class="neg">●</span></td><td>EURUSD</td><td>BUY</td><td>0.01</td><td>Tue 10/6 4:01 AM ET → Wed 10/7 3:17 AM ET</td><td class="neg"><b>−$2.35</b></td></tr></table>
+  <div class="k" style="margin-top:6px"><b>Open now</b> (P/L net of commission + swap)</div><table><tr><th>Pair</th><th>Side</th><th>Lot</th><th>Entry</th><th>Open P/L (net)</th></tr><tr><td>EURUSD</td><td>SELL</td><td>0.01</td><td>Wed 10/7 4:01 AM ET</td><td class="pos"><b>+$1.58</b></td></tr></table><div class="k" style="margin-top:6px"><b>Closed</b> (2, most recent first)</div><table><tr><th></th><th>Pair</th><th>Side</th><th>Lot</th><th>Open → Close</th><th>Closed P/L</th></tr><tr><td><span class="neg">●</span></td><td>AUDUSD</td><td>BUY</td><td>0.01</td><td>Tue 10/6 4:01 AM ET → Wed 10/7 3:57 AM ET</td><td class="neg"><b>−$1.39</b></td></tr><tr><td><span class="neg">●</span></td><td>EURUSD</td><td>BUY</td><td>0.01</td><td>Tue 10/6 4:01 AM ET → Wed 10/7 3:17 AM ET</td><td class="neg"><b>−$2.35</b></td></tr></table>
  </div>
  <h3>Cumulative closed P/L per trade</h3>
  <svg viewBox="0 0 640 220" width="100%" role="img" aria-label="Micro Test 3 cumulative closed P/L" preserveAspectRatio="xMidYMid meet" style="display:block"><line x1="58" x2="626" y1="190.0" y2="190.0" stroke="#24304a" stroke-width="1"/><text x="52" y="194.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$4</text><line x1="58" x2="626" y1="146.0" y2="146.0" stroke="#24304a" stroke-width="1"/><text x="52" y="150.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$3</text><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#24304a" stroke-width="1"/><text x="52" y="106.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$2</text><line x1="58" x2="626" y1="58.0" y2="58.0" stroke="#24304a" stroke-width="1"/><text x="52" y="62.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$1</text><line x1="58" x2="626" y1="14.0" y2="14.0" stroke="#24304a" stroke-width="1"/><text x="52" y="18.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$0</text><line x1="58" x2="626" y1="26.1" y2="26.1" stroke="#5a6b90" stroke-width="1.2" stroke-dasharray="4 3"/><polygon points="58.0,26.1 58.0,26.1 342.0,121.5 626.0,177.9 626.0,26.1" fill="#ff5a5a" fill-opacity="0.12"/><polyline points="58.0,26.1 342.0,121.5 626.0,177.9" fill="none" stroke="#ff5a5a" stroke-width="2.5" stroke-linejoin="round"/><circle cx="58.0" cy="26.1" r="3.5" fill="#9fb4e0"><title>start: ±$0.00</title></circle><text x="58.0" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">start</text><circle cx="342.0" cy="121.5" r="3.5" fill="#ff5a5a"><title>#1: −$2.35</title></circle><text x="342.0" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#1</text><circle cx="626.0" cy="177.9" r="3.5" fill="#ff5a5a"><title>#2: −$3.74</title></circle><text x="626.0" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#2</text><text x="622.0" y="168.9" text-anchor="end" font-size="13" font-weight="700" fill="#ff5a5a">−$3.74</text></svg>
@@ -173,8 +173,8 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
 
 <section class="card" style="border-color:#2ee68a">
  <div class="hd"><h2>Active test: Micro Test 4 (Consistency v4.2)</h2><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · Consistency v4.2: 7 pairs (6 majors + NZDUSD); NET-green trail (net = P/L + swap - commission); trail arms at peak net &gt;= 1x ATR14(H1) $ (min $0.64); floor = max($0.50, 80% of peak net); close only if net green; max hold 48h then first net &gt;= $0.50; H1 Donchian-24+EMA50 entry; broker SL 4xATR14 (disaster stop, only red exit); 0.01 lot; max 2 open · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:48 AM ET</div>
- <div class="k" style="margin:6px 0;padding:8px;border:1px solid #2ee68a55;border-radius:10px"><b>Reality check:</b> trades since v4.2 start (Wed 10/7 3:30 AM ET, 5.3 h ago): <b>1</b> (0 open, 1 closed). Entry checks: <b>1 per hour</b> at HH:01:30 ET on 7 pairs (3 so far); open trades are re-read about every 20 s. Why so few: an entry needs a fresh 24-hour H1 breakout in the EMA50 trend direction, and at most 2 trades can be open; last check Wed 10/7 6:01 AM ET: 0 of 7 pairs qualified, 1 of 2 slots in use.</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · Consistency v4.2: 7 pairs (6 majors + NZDUSD); NET-green trail (net = P/L + swap - commission); trail arms at peak net &gt;= 1x ATR14(H1) $ (min $0.64); floor = max($0.50, 80% of peak net); close only if net green; max hold 48h then first net &gt;= $0.50; H1 Donchian-24+EMA50 entry; broker SL 4xATR14 (disaster stop, only red exit); 0.01 lot; max 2 open · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:53 AM ET</div>
+ <div class="k" style="margin:6px 0;padding:8px;border:1px solid #2ee68a55;border-radius:10px"><b>Reality check:</b> trades since v4.2 start (Wed 10/7 3:30 AM ET, 5.4 h ago): <b>1</b> (0 open, 1 closed). Entry checks: <b>1 per hour</b> at HH:01:30 ET on 7 pairs (3 so far); open trades are re-read about every 20 s. Why so few: an entry needs a fresh 24-hour H1 breakout in the EMA50 trend direction, and at most 2 trades can be open; last check Wed 10/7 6:01 AM ET: 0 of 7 pairs qualified, 1 of 2 slots in use.</div>
  
  <div class="grid">
   <div class="st"><div class="k">Closed P/L</div><div class="v pos">+$1.57</div><div class=k>from $0 at v4.2 start Wed 10/7 3:30 AM ET</div></div>
@@ -190,7 +190,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
   <div class="k">no new entries since Wed 10/7 6:49 AM ET</div>
-  <div class="k">Last synced <b>8:48:40 AM ET</b> · runner last check <b class="pos">8:48 AM ET</b> · next check <b>open trades managed every cycle; no new entries</b></div>
+  <div class="k">Last synced <b>8:53:42 AM ET</b> · runner last check <b class="pos">8:53 AM ET</b> · next check <b>open trades managed every cycle; no new entries</b></div>
   
   <div class="grid">
    <div class="st"><div class="k">Consistency (green closes)</div><div class="v pos">100%</div><div class="cbar"><i style="width:100%;background:#2ee68a"></i><b title="75% target"></b></div><div class="k">1 green / 1 closes · target 75% · 1 green of 1 trading day(s) (100%)</div><div class="k">open now: none</div></div>
@@ -207,31 +207,31 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
 <section class="card">
  <div class="hd"><h2>Active test: Consistency v4.2-Z wide (z-score scalp, M5+M15, 20 pairs)</h2><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
  <div class="k" style="margin:6px 0;padding:8px;border:1px solid #2ee68a55;border-radius:10px"><b>Reality check:</b> trades since start (Wed 10/7 4:12 AM ET): <b>2</b> (1 open, 1 closed). Wide since Wed 10/7 5:19 AM ET: <b>20 pairs</b> (EURUSD, GBPUSD, USDJPY, USDCHF, USDCAD, AUDUSD, NZDUSD, AUDCAD, EURJPY, GBPJPY, EURGBP, AUDJPY, EURCHF, CADJPY, NZDJPY, GBPCHF, EURAUD, EURCAD, GBPAUD, AUDNZD); M5 z ≥ 3.0, M15 z ≥ 2.5; checks every 5 min (12 M5 + 4 M15 per hour, 26 so far); max 6 open, 1 per pair per timeframe; last check Wed 10/7 6:46 AM ET (M5): 0 of 20 pairs signalled, 1 of 6 slots in use.</div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 0.01 lot · tag MICRO5 · runs side by side with Micro Test 4 (Consistency v4.2), separate positions · v4.2-Z wide: every 5 min; M5 z(20) &gt;= 3 and M15 z(20) &gt;= 2.5 mean-reversion (buy when z &lt;= -thr, sell when z &gt;= +thr), only with the H1 trend (last H1 close above EMA50 for buys, below for sells); broker TP max(1x ATR14(M15), net +$0.15); broker SL max(10x ATR14(M15), 10 p) = only red exit; after 240 min close at first net &gt;= +$0.10 (re-checked at click); up to 20 FX pairs in Market Watch, 0.01 lot, max 6 open, max 1 per pair per timeframe; tag MICRO5 · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:48 AM ET</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 0.01 lot · tag MICRO5 · runs side by side with Micro Test 4 (Consistency v4.2), separate positions · v4.2-Z wide: every 5 min; M5 z(20) &gt;= 3 and M15 z(20) &gt;= 2.5 mean-reversion (buy when z &lt;= -thr, sell when z &gt;= +thr), only with the H1 trend (last H1 close above EMA50 for buys, below for sells); broker TP max(1x ATR14(M15), net +$0.15); broker SL max(10x ATR14(M15), 10 p) = only red exit; after 240 min close at first net &gt;= +$0.10 (re-checked at click); up to 20 FX pairs in Market Watch, 0.01 lot, max 6 open, max 1 per pair per timeframe; tag MICRO5 · runner <b class="pos">running</b> · placing <b class="neg">OFF</b> · last check Wed 10/7 8:53 AM ET</div>
  
  <div class="grid">
   <div class="st"><div class="k">Consistency (green closes)</div><div class="v pos">100.0%</div><div class=k>1 closes · 1 W · 0 L · target ≥ 75%</div></div>
   <div class="st"><div class="k">Closes today</div><div class="v pos">1</div><div class=k>1 green · net +$0.58 · 100.0% green · FX day from 5 PM ET</div></div>
   <div class="st"><div class="k">Net closed P/L</div><div class="v pos">+$0.58</div><div class=k>from $0 at start Wed 10/7 4:12 AM ET</div></div>
-  <div class="st"><div class="k">Open P/L (net of commission)</div><div class="v neg">−$1.64</div><div class=k>1 open trade(s) · after $0.06 commission + swap</div></div>
+  <div class="st"><div class="k">Open P/L (net of commission)</div><div class="v neg">−$1.61</div><div class=k>1 open trade(s) · after $0.06 commission + swap</div></div>
   <div class="st"><div class="k">Next signal check</div><div class="v ">no data</div><div class=k>every 5 min (M5 + M15)</div></div>
  </div>
- <div class="k" style="margin-top:6px">Open now (net of commission): GBPCHF buy <b class="neg">−$1.64</b></div>
+ <div class="k" style="margin-top:6px">Open now (net of commission): GBPCHF buy <b class="neg">−$1.61</b></div>
  <div class="k" style="margin-top:6px">Stop rule (pause at −$150 closed or 5 losses in a row): <b class="pos">OK</b> · room $150.58 to −$150 · 5 of 5 losses left (streak 0)</div>
  <div class="k" style="margin-top:6px">Backtest (honest): v4.2-Z wide quick backtest (micro5/btw, M1 HistData Apr-2025..Sep-2026, 12 of the 20 pairs with data, real costs, max 6 open, 1 per pair per TF): M5 z&gt;=3.0 + M15 z&gt;=2.5, H1 EMA50 trend: 12.2 closes/day, 90.4% green, full 18 months -$534.78 (PF 0.78, max DD $653); OOS last 6 months 13.2/day, 90.8% green, -$67.42 (PF 0.90). No tested threshold set was positive (all 48 variants lost money). Deployed anyway on Owner order 10/7 5:08 AM ET (&#x27;open the door&#x27;); live results judge it. Original v4.2-Z (7 pairs, M15): full -$120 / -$171 DD. Original v4.2-Z (7 pairs, M15 only, 04:12–05:19 ET): full 18 months −$120 with a −$171 drawdown.</div>
  
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#3a2e10;color:#ffc94d">PAUSED</span></div>
   <div class="k">no new entries since Wed 10/7 6:49 AM ET; still managing 1 open trade(s)</div>
-  <div class="k">Last synced <b>8:48:40 AM ET</b> · runner last check <b class="pos">8:48 AM ET</b> · next check <b>open trades managed every cycle; no new entries</b></div>
+  <div class="k">Last synced <b>8:53:42 AM ET</b> · runner last check <b class="pos">8:53 AM ET</b> · next check <b>open trades managed every cycle; no new entries</b></div>
   
   <div class="grid">
-   <div class="st"><div class="k">Consistency (green closes)</div><div class="v pos">100%</div><div class="cbar"><i style="width:100%;background:#2ee68a"></i><b title="75% target"></b></div><div class="k">1 green / 1 closes · target 75% · 1 green of 1 trading day(s) (100%)</div><div class="k">open now: 1 trade(s), −$1.64 (red) · open consistency 0/1 net green (0%)</div></div>
+   <div class="st"><div class="k">Consistency (green closes)</div><div class="v pos">100%</div><div class="cbar"><i style="width:100%;background:#2ee68a"></i><b title="75% target"></b></div><div class="k">1 green / 1 closes · target 75% · 1 green of 1 trading day(s) (100%)</div><div class="k">open now: 1 trade(s), −$1.61 (red) · open consistency 0/1 net green (0%)</div></div>
    <div class="st"><div class="k">+ : − ratio</div><div class="v pos">all green</div><div class=k>+$0.58 green vs $0.00 red</div></div>
    <div class="st"><div class="k">Win / Loss</div><div class="v pos">1 W / 0 L</div><div class=k>1 closed trade(s)</div></div>
    <div class="st"><div class="k">Net closed</div><div class="v pos">+$0.58</div><div class=k>+0.0003% of $199,837.84 balance</div></div>
   </div>
-  <div class="k" style="margin-top:6px"><b>Open now</b> (P/L net of commission + swap)</div><table><tr><th>Pair</th><th>Side</th><th>Lot</th><th>Entry</th><th>Open P/L (net)</th></tr><tr><td>GBPCHF</td><td>BUY</td><td>0.01</td><td>Wed 10/7 6:16 AM ET</td><td class="neg"><b>−$1.64</b></td></tr></table><div class="k" style="margin-top:6px"><b>Closed</b> (1, most recent first)</div><table><tr><th></th><th>Pair</th><th>Side</th><th>Lot</th><th>Open → Close</th><th>Closed P/L</th></tr><tr><td><span class="pos">●</span></td><td>USDCHF</td><td>BUY</td><td>0.01</td><td>Wed 10/7 6:11 AM ET → Wed 10/7 6:31 AM ET</td><td class="pos"><b>+$0.58</b></td></tr></table>
+  <div class="k" style="margin-top:6px"><b>Open now</b> (P/L net of commission + swap)</div><table><tr><th>Pair</th><th>Side</th><th>Lot</th><th>Entry</th><th>Open P/L (net)</th></tr><tr><td>GBPCHF</td><td>BUY</td><td>0.01</td><td>Wed 10/7 6:16 AM ET</td><td class="neg"><b>−$1.61</b></td></tr></table><div class="k" style="margin-top:6px"><b>Closed</b> (1, most recent first)</div><table><tr><th></th><th>Pair</th><th>Side</th><th>Lot</th><th>Open → Close</th><th>Closed P/L</th></tr><tr><td><span class="pos">●</span></td><td>USDCHF</td><td>BUY</td><td>0.01</td><td>Wed 10/7 6:11 AM ET → Wed 10/7 6:31 AM ET</td><td class="pos"><b>+$0.58</b></td></tr></table>
  </div>
  <h3>Cumulative closed P/L per trade</h3>
  <svg viewBox="0 0 640 220" width="100%" role="img" aria-label="v4.2-Z cumulative closed P/L" preserveAspectRatio="xMidYMid meet" style="display:block"><line x1="58" x2="626" y1="190.0" y2="190.0" stroke="#24304a" stroke-width="1"/><text x="52" y="194.0" text-anchor="end" font-size="11" fill="#9fb4e0">−$0</text><line x1="58" x2="626" y1="146.0" y2="146.0" stroke="#24304a" stroke-width="1"/><text x="52" y="150.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$0</text><line x1="58" x2="626" y1="102.0" y2="102.0" stroke="#24304a" stroke-width="1"/><text x="52" y="106.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$0</text><line x1="58" x2="626" y1="58.0" y2="58.0" stroke="#24304a" stroke-width="1"/><text x="52" y="62.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$0</text><line x1="58" x2="626" y1="14.0" y2="14.0" stroke="#24304a" stroke-width="1"/><text x="52" y="18.0" text-anchor="end" font-size="11" fill="#9fb4e0">+$1</text><line x1="58" x2="626" y1="177.9" y2="177.9" stroke="#5a6b90" stroke-width="1.2" stroke-dasharray="4 3"/><polygon points="58.0,177.9 58.0,177.9 626.0,26.1 626.0,177.9" fill="#2ee68a" fill-opacity="0.12"/><polyline points="58.0,177.9 626.0,26.1" fill="none" stroke="#2ee68a" stroke-width="2.5" stroke-linejoin="round"/><circle cx="58.0" cy="177.9" r="3.5" fill="#9fb4e0"><title>start: ±$0.00</title></circle><text x="58.0" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">start</text><circle cx="626.0" cy="26.1" r="3.5" fill="#2ee68a"><title>#1: +$0.58</title></circle><text x="626.0" y="210" text-anchor="middle" font-size="11" fill="#9fb4e0">#1</text><text x="622.0" y="17.1" text-anchor="end" font-size="13" font-weight="700" fill="#2ee68a">+$0.58</text></svg>
