@@ -27,12 +27,12 @@ table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px} td,th{p
 details summary{cursor:pointer;margin-top:6px}
 .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 10px;font-size:14px} .bar button{background:#2ee68a;color:#04130a;border:0;border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px;cursor:pointer}
 </style></head><body>
-<div class="top"><h1>Scalp Consistency 1</h1><span class="sync">Synced Thu Oct 8 2026, 2:28 AM ET · <span id="ago"></span></span></div>
+<div class="top"><h1>Scalp Consistency 1</h1><span class="sync">Synced Thu Oct 8 2026, 2:33 AM ET · <span id="ago"></span></span></div>
 <div class="bar"><button id="rf" onclick="hardReload()">↻ Refresh now</button>
 <label><input type="checkbox" id="auto" onchange="setAuto(this.checked)"> Auto-refresh every 60 s</label>
 <span class="k" id="cd"></span></div>
 <script>
-const SYNC_MS = 1791440884160;
+const SYNC_MS = 1791441185612;
 function hardReload(){ const u = new URL(location.href); u.searchParams.set('t', Date.now()); location.replace(u.toString()); }
 function setAuto(v){ localStorage.setItem('dashAuto', v ? '1' : '0'); left = 60; }
 let left = 60;
@@ -51,7 +51,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
 
 <section class="card" style="border-color:#ffc400">
  <div class="hd"><h2>Current test: Scalp Consistency 1</h2><span class="tag" style="background:#1d2740;color:#9fb4e0">WAITING</span></div>
- <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 0.01 lot · tag SCALP1 · SCALP1 v1: M15 RSI(2) &lt; 5 buy / &gt; 95 sell, only when stretched against the H1 EMA50 (buy below it, sell above it); entries on M15 closes 14:00-16:00 ET (US afternoon, after the London close); broker TP 1x ATR14(M15), broker SL 3x the TP distance; time stop 540 min at market; skip ATR spikes &gt; 1.4x 5-day median, FOMC days, and trades where spread+commission &gt; 40% of TP; 12 FX pairs, 0.01 lot, max 4 open, 1 per pair, max 4 new per bar; tag SCALP1 · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Thu 10/8 2:27 AM ET</div>
+ <div class="k">FTMO trial 1600199066 · OANDA-Demo-1 · 0.01 lot · tag SCALP1 · SCALP1 v1: M15 RSI(2) &lt; 5 buy / &gt; 95 sell, only when stretched against the H1 EMA50 (buy below it, sell above it); entries on M15 closes 14:00-16:00 ET (US afternoon, after the London close); broker TP 1x ATR14(M15), broker SL 3x the TP distance; time stop 540 min at market; skip ATR spikes &gt; 1.4x 5-day median, FOMC days, and trades where spread+commission &gt; 40% of TP; 12 FX pairs, 0.01 lot, max 4 open, 1 per pair, max 4 new per bar; tag SCALP1 · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Thu 10/8 2:32 AM ET</div>
  
  <div class="grid">
   <div class="st"><div class="k">Consistency (green closes)</div><div class="v neg">0%</div><div class=k>0 green / 1 closes · target ≥ 75%</div></div>
@@ -71,7 +71,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#1d2740;color:#9fb4e0">WAITING</span></div>
   <div class="k">armed; next signal Thu 10/8 2:00 PM ET</div>
-  <div class="k">Last synced <b>2:28:04 AM ET</b> · runner last check <b class="pos">2:27 AM ET</b> · next check <b>2:00 PM ET</b></div>
+  <div class="k">Last synced <b>2:33:05 AM ET</b> · runner last check <b class="pos">2:32 AM ET</b> · next check <b>2:00 PM ET</b></div>
   
     <div class="grid">
    <div class="st"><div class="k">Consistency (green closes)</div><div class="v neg">0%</div><div class="cbar"><i style="width:0%;background:#ff5a5a"></i><b title="75% target"></b></div><div class="k">0 green / 1 closes · target 75% · 0 green of 1 trading day(s) (0%)</div><div class="k">open now: none</div></div>
@@ -88,20 +88,21 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
 
 <section class="card" style="border-color:#2ee68a">
  <div class="hd"><h2>Aggressive 1 (AGGR1)</h2><span class="tag" style="background:#12351f;color:#2ee68a">LIVE</span></div>
- <div class="k">0.01 lot · tag AGGR1 · AGGR1 v1.1 (aggressive version of SCALP1): scans all 20 FX pairs at every M15 close, ALL HOURS FX is open (no entries 4:45-6:15 PM ET rollover or Friday after 3:30 PM) for two snap-back setups - RSI(2) &lt; 3 / &gt; 97 against the H1 EMA50 (buy stretched-down below it, sell stretched-up above it) and a 3-sigma z-score stretch of the M15 close vs its 20-bar mean. 0.01 lot, hard SL 5x ATR14(M15) (max $2), no fixed TP: Owner&#x27;s net trailing ladder moves the broker SL up (+$0.03 -&gt; lock $0.01 ... +$1 -&gt; $0.80, then 80% of peak) with breathing room 1x ATR14(M1); time stop 9 h; max 6 open, 1 per pair; tag AGGR1 · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Thu 10/8 2:27 AM ET</div>
+ <div class="k">0.01 lot · tag AGGR1 · AGGR1 v1.2 (aggressive version of SCALP1): scans all 20 FX pairs at every M15 close, ALL HOURS FX is open (no entries 4:45-6:15 PM ET rollover or Friday after 3:30 PM) for two snap-back setups - RSI(2) &lt; 3 / &gt; 97 against the H1 EMA50 (buy stretched-down below it, sell stretched-up above it) and a 3-sigma z-score stretch of the M15 close vs its 20-bar mean. 0.01 lot, hard SL 5x ATR14(M15) (max $2), no fixed TP: Owner&#x27;s net trailing ladder moves the broker SL up (+$0.03 -&gt; lock $0.01 ... +$1 -&gt; $0.80, then 80% of peak) with breathing room 1x ATR14(M1); time stop 9 h; NO cap on the number of open trades (stacking on a pair allowed on a new bar) - the only limit is the 3% cap: no new entry if total risk to the hard stops of all open AGGR1 trades would exceed 3% of the start balance (~$5,995), and if open P/L + today&#x27;s closed P/L hits -3% all AGGR1 trades are closed and placing pauses; tag AGGR1 · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Thu 10/8 2:32 AM ET</div>
  
  <div class="k" style="margin-top:4px">Now: scanning bar closes in the entry window · closes today 3 (3 green, net +$0.55)</div>
  <div class="k" style="margin-top:4px">Auto-pause: <b class="pos">OK</b> · room $150.55 to −$150 · 6 of 6 losses-in-a-row left · pauses if still negative after 30 closes</div>
+ <div class="k" style="margin-top:4px"><b>3% cap</b> (only limit on open trades): open risk to stops $2.19 of $5,995.09 allowed · open + today's closed −$0.24 (closes all AGGR1 and pauses at −$5,995.09)</div>
  
  <div class="grid">
-  <div class="st"><div class="k">Closed trades</div><div class="v mut">3</div><div class=k>1 open now · open net −$0.36</div></div>
+  <div class="st"><div class="k">Closed trades</div><div class="v mut">3</div><div class=k>1 open now · open net −$0.79</div></div>
   <div class="st"><div class="k">Win / Loss</div><div class="v pos">3 W / 0 L</div><div class=k>green = net &gt; $0 after commission + swap</div></div>
   <div class="st"><div class="k">Green closes</div><div class="v pos">100%</div><div class=k>3 of 3 · target 75%</div></div>
   <div class="st"><div class="k">+ : − ratio</div><div class="v pos">+$0.55 : $0.00 (all green)</div><div class=k>+$0.55 green vs $0.00 red</div></div>
  </div>
  <div class="grid" style="margin-top:8px">
   <div class="st"><div class="k">Net closed</div><div class="v pos">+$0.55</div><div class=k>+0.0003% of $199,836.30 balance</div></div>
-  <div class="st"><div class="k">Total if closed now</div><div class="v pos">+$0.19</div><div class=k>closed +$0.55 + open −$0.36</div></div>
+  <div class="st"><div class="k">Total if closed now</div><div class="v neg">−$0.24</div><div class=k>closed +$0.55 + open −$0.79</div></div>
   <div class="st"><div class="k">Closes today</div><div class="v pos">3</div><div class=k>3 green · net +$0.55</div></div>
   <div class="st"><div class="k">Losses in a row</div><div class="v mut">0 of 6</div><div class=k>auto-pause room $150.55 to −$150</div></div>
  </div>
@@ -109,47 +110,48 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#12351f;color:#2ee68a">LIVE</span></div>
   <div class="k">1 open trade(s) managed</div>
-  <div class="k">Last synced <b>2:28:04 AM ET</b> · runner last check <b class="pos">2:27 AM ET</b> · next check <b>2:27 AM ET</b></div>
+  <div class="k">Last synced <b>2:33:05 AM ET</b> · runner last check <b class="pos">2:32 AM ET</b> · next check <b>2:32 AM ET</b></div>
   
   
-  <div class="k" style="margin-top:6px"><b>Open now</b> (P/L net of commission + swap)</div><table><tr><th>Pair</th><th>Side</th><th>Lot</th><th>Entry</th><th>Open P/L (net)</th></tr><tr><td>GBPCHF</td><td>BUY</td><td>0.01</td><td>Thu 10/8 2:15 AM ET</td><td class="neg"><b>−$0.36</b></td></tr></table><div class="k" style="margin-top:6px"><b>Closed</b> (3, most recent first)</div><table><tr><th></th><th>Pair</th><th>Side</th><th>Lot</th><th>Open → Close</th><th>Closed P/L</th></tr><tr><td><span class="pos">●</span></td><td>USDCHF</td><td>SELL</td><td>0.01</td><td>Thu 10/8 2:00 AM ET → Thu 10/8 2:26 AM ET</td><td class="pos"><b>+$0.31</b></td></tr><tr><td><span class="pos">●</span></td><td>GBPUSD</td><td>BUY</td><td>0.01</td><td>Thu 10/8 2:00 AM ET → Thu 10/8 2:26 AM ET</td><td class="pos"><b>+$0.20</b></td></tr><tr><td><span class="pos">●</span></td><td>EURUSD</td><td>BUY</td><td>0.01</td><td>Thu 10/8 2:00 AM ET → Thu 10/8 2:13 AM ET</td><td class="pos"><b>+$0.04</b></td></tr></table>
+  <div class="k" style="margin-top:6px"><b>Open now</b> (P/L net of commission + swap)</div><table><tr><th>Pair</th><th>Side</th><th>Lot</th><th>Entry</th><th>Open P/L (net)</th></tr><tr><td>GBPCHF</td><td>BUY</td><td>0.01</td><td>Thu 10/8 2:15 AM ET</td><td class="neg"><b>−$0.79</b></td></tr></table><div class="k" style="margin-top:6px"><b>Closed</b> (3, most recent first)</div><table><tr><th></th><th>Pair</th><th>Side</th><th>Lot</th><th>Open → Close</th><th>Closed P/L</th></tr><tr><td><span class="pos">●</span></td><td>USDCHF</td><td>SELL</td><td>0.01</td><td>Thu 10/8 2:00 AM ET → Thu 10/8 2:26 AM ET</td><td class="pos"><b>+$0.31</b></td></tr><tr><td><span class="pos">●</span></td><td>GBPUSD</td><td>BUY</td><td>0.01</td><td>Thu 10/8 2:00 AM ET → Thu 10/8 2:26 AM ET</td><td class="pos"><b>+$0.20</b></td></tr><tr><td><span class="pos">●</span></td><td>EURUSD</td><td>BUY</td><td>0.01</td><td>Thu 10/8 2:00 AM ET → Thu 10/8 2:13 AM ET</td><td class="pos"><b>+$0.04</b></td></tr></table>
  </div>
- <div class="k" style="margin-top:6px"><b>Stop-loss ladder now</b> (net $, after commission)</div><table><tr><th>Pair</th><th>Side</th><th>Net now</th><th>Peak</th><th>Locked</th><th>SL</th></tr><tr><td>GBPCHF</td><td>BUY</td><td class="neg">−$0.36</td><td>−$0.16</td><td class="mut">not yet (arms at +$0.03)</td><td>1.09819</td></tr></table>
+ <div class="k" style="margin-top:6px"><b>Stop-loss ladder now</b> (net $, after commission)</div><table><tr><th>Pair</th><th>Side</th><th>Net now</th><th>Peak</th><th>Locked</th><th>SL</th></tr><tr><td>GBPCHF</td><td>BUY</td><td class="neg">−$0.79</td><td>−$0.16</td><td class="mut">not yet (arms at +$0.03)</td><td>1.09819</td></tr></table>
  <div class="k" style="margin-top:6px">Backtest (honest): ALL-HOURS (live since 10/8 1:47 AM ET on Owner order &#x27;Let them trade all hours anyway&#x27;; same rule, entries any hour except 4:45-6:15 PM ET and Friday after 3:30 PM): CLEARLY NEGATIVE - OUT-OF-SAMPLE Apr..Sep 2026 5289 trades, 40.7/day, 72.5% green, net -867.93, PF 0.579, max DD $877.56, worst $-6.66; in-sample 47.3/day, 75.9% green, net -1485.03, PF 0.693; full 18 months -2352.97. The auto-pause (net negative after 30 closes / 6 losses in a row / -$150) is expected to stop it early. EARLIER AFTERNOON-ONLY VERSION: AGGR1 research (aggr1/bt: HistData M1 bid, Apr-2025..Sep-2026; costs: per-pair spread x session factor, $0.06 commission, 0.2 p entry slip, 0.3 p stop slip, swap; Owner&#x27;s net trailing ladder simulated with a 1-bar delay and the breathing-room rule; SL checked before the trail moves inside each M1 bar; max 6 open, 1 per pair). OUT-OF-SAMPLE Apr..Sep 2026: 585 trades, 4.5/day, 78.1% green, net +65.00, PF 1.472, avg win $0.444 vs avg loss $1.076, max DD $14.53, worst $-4.51. In-sample Apr-2025..Mar-2026: 4.4/day, 78.1% green, net +68.75, PF 1.231, max DD $18.89. Spread x2 stress: IS +15.23 / OOS +39.92. Parameters were chosen on the full 18 months from a broad screen, so OOS is not perfectly clean. Every &#x27;anytime&#x27; variant (all hours, M1/M5/H1, London/NY/Asia) backtested clearly negative (about -$200 to -$1,000 per 6 months), so entries are limited to 2:00-4:45 PM ET, the only hours that held up. Caveat: live signals use Yahoo bars (M15 RSI agreement ~0.9-0.98 vs backtest data).</div>
 </section>
 
 <section class="card" style="border-color:#7fb2ff">
  <div class="hd"><h2>Ping 1 (PING1)</h2><span class="tag" style="background:#12351f;color:#2ee68a">LIVE</span></div>
- <div class="k">0.01 lot · tag PING1 · PING1 v1.1 (Owner&#x27;s V on tiny timeframes): direction = snap-back after a stretched M4 bar (RSI(2) of M4 &lt; 5 -&gt; up, &gt; 95 -&gt; down, valid 3 M4 bars); entry at the M3 &#x27;V&#x27; turn - the previous M3 bar made the 5-bar low, this M3 bar is green, closes above the previous bar&#x27;s high with a higher low -&gt; BUY (inverted V -&gt; SELL). 9 lowest-spread pairs, entries ALL HOURS FX is open (no entries 4:45-6:15 PM ET rollover or Friday after 3:30 PM); 0.01 lot, hard SL 20x ATR14(M3) (max $3), no fixed TP: Owner&#x27;s net trailing ladder moves the broker SL up (+$0.03 -&gt; lock $0.01 ... +$1 -&gt; $0.80, then 80% of peak) with breathing room 3x ATR14(M1); time stop 8 h; max 6 open, 1 per pair; tag PING1 · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Thu 10/8 2:27 AM ET</div>
+ <div class="k">0.01 lot · tag PING1 · PING1 v1.1 (Owner&#x27;s V on tiny timeframes): direction = snap-back after a stretched M4 bar (RSI(2) of M4 &lt; 5 -&gt; up, &gt; 95 -&gt; down, valid 3 M4 bars); entry at the M3 &#x27;V&#x27; turn - the previous M3 bar made the 5-bar low, this M3 bar is green, closes above the previous bar&#x27;s high with a higher low -&gt; BUY (inverted V -&gt; SELL). 9 lowest-spread pairs, entries ALL HOURS FX is open (no entries 4:45-6:15 PM ET rollover or Friday after 3:30 PM); 0.01 lot, hard SL 20x ATR14(M3) (max $3), no fixed TP: Owner&#x27;s net trailing ladder moves the broker SL up (+$0.03 -&gt; lock $0.01 ... +$1 -&gt; $0.80, then 80% of peak) with breathing room 3x ATR14(M1); time stop 8 h; max 6 open, 1 per pair; tag PING1 · runner <b class="pos">running</b> · placing <b class="pos">ON</b> · last check Thu 10/8 2:32 AM ET</div>
  
  <div class="k" style="margin-top:4px">Now: scanning bar closes in the entry window · closes today 0 (0 green, net ±$0.00)</div>
  <div class="k" style="margin-top:4px">Auto-pause: <b class="pos">OK</b> · room $150.00 to −$150 · 6 of 6 losses-in-a-row left · pauses if still negative after 30 closes</div>
  
+ 
  <div class="grid">
-  <div class="st"><div class="k">Closed trades</div><div class="v mut">0</div><div class=k>0 open now · open net ±$0.00</div></div>
+  <div class="st"><div class="k">Closed trades</div><div class="v mut">0</div><div class=k>2 open now · open net −$0.08</div></div>
   <div class="st"><div class="k">Win / Loss</div><div class="v mut">0 W / 0 L</div><div class=k>green = net &gt; $0 after commission + swap</div></div>
   <div class="st"><div class="k">Green closes</div><div class="v mut">0%</div><div class=k>0 of 0 · target 75%</div></div>
   <div class="st"><div class="k">+ : − ratio</div><div class="v mut">0 : 0</div><div class=k>±$0.00 green vs $0.00 red</div></div>
  </div>
  <div class="grid" style="margin-top:8px">
   <div class="st"><div class="k">Net closed</div><div class="v mut">±$0.00</div><div class=k>±0.0000% of $199,836.30 balance</div></div>
-  <div class="st"><div class="k">Total if closed now</div><div class="v mut">±$0.00</div><div class=k>closed ±$0.00 + open ±$0.00</div></div>
+  <div class="st"><div class="k">Total if closed now</div><div class="v neg">−$0.08</div><div class=k>closed ±$0.00 + open −$0.08</div></div>
   <div class="st"><div class="k">Closes today</div><div class="v mut">0</div><div class=k>0 green · net ±$0.00</div></div>
   <div class="st"><div class="k">Losses in a row</div><div class="v mut">0 of 6</div><div class=k>auto-pause room $150.00 to −$150</div></div>
  </div>
  
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#12351f;color:#2ee68a">LIVE</span></div>
-  <div class="k">armed; scanning, next check Thu 10/8 2:27 AM ET</div>
-  <div class="k">Last synced <b>2:28:04 AM ET</b> · runner last check <b class="pos">2:27 AM ET</b> · next check <b>2:27 AM ET</b></div>
-  <div class="k"><b>Consistency:</b> no closed trades yet (0/0) · open now: none</div>
+  <div class="k">2 open trade(s) managed</div>
+  <div class="k">Last synced <b>2:33:05 AM ET</b> · runner last check <b class="pos">2:32 AM ET</b> · next check <b>2:32 AM ET</b></div>
+  <div class="k"><b>Consistency:</b> no closed trades yet (0/0) · open now: 2 trade(s), −$0.08 (red) · open consistency 1/2 net green (50%)</div>
   
-  <div class="k" style="margin-top:6px"><b>No trades yet</b> · next signal Thu 10/8 2:27 AM ET</div>
+  <div class="k" style="margin-top:6px"><b>Open now</b> (P/L net of commission + swap)</div><table><tr><th>Pair</th><th>Side</th><th>Lot</th><th>Entry</th><th>Open P/L (net)</th></tr><tr><td>EURUSD</td><td>SELL</td><td>0.01</td><td>Thu 10/8 2:30 AM ET</td><td class="pos"><b>+$0.04</b></td></tr><tr><td>USDCAD</td><td>BUY</td><td>0.01</td><td>Thu 10/8 2:30 AM ET</td><td class="neg"><b>−$0.12</b></td></tr></table><div class="k" style="margin-top:6px">No closed trades yet.</div>
  </div>
- 
+ <div class="k" style="margin-top:6px"><b>Stop-loss ladder now</b> (net $, after commission)</div><table><tr><th>Pair</th><th>Side</th><th>Net now</th><th>Peak</th><th>Locked</th><th>SL</th></tr><tr><td>USDCAD</td><td>BUY</td><td class="neg">−$0.12</td><td>−$0.10</td><td class="mut">not yet (arms at +$0.03)</td><td>1.42198</td></tr><tr><td>EURUSD</td><td>SELL</td><td class="pos">+$0.04</td><td>+$0.04</td><td class="mut">not yet (arms at +$0.03)</td><td>1.12289</td></tr></table>
  <div class="k" style="margin-top:6px">Backtest (honest): ALL-HOURS (live since 10/8 1:47 AM ET on Owner order &#x27;Let them trade all hours anyway&#x27;; same rule, entries any hour except 4:45-6:15 PM ET and Friday after 3:30 PM): CLEARLY NEGATIVE - OUT-OF-SAMPLE Apr..Sep 2026 4569 trades, 35.1/day, 68.4% green, net -609.33, PF 0.698, max DD $613.23, worst $-6.34; in-sample 40.6/day, 69.4% green, net -1494.09, PF 0.73; full 18 months -2103.43. The auto-pause (net negative after 30 closes / 6 losses in a row / -$150) is expected to stop it early. EARLIER AFTERNOON-ONLY VERSION: PING1 research (aggr1/bt: HistData M1 bid, Apr-2025..Sep-2026; costs: per-pair spread x session factor, $0.06 commission, 0.2 p entry slip, 0.3 p stop slip, swap; Owner&#x27;s net trailing ladder simulated with a 1-bar delay and the breathing-room rule; SL checked before the trail moves inside each M1 bar; max 6 open, 1 per pair). OUT-OF-SAMPLE Apr..Sep 2026: 418 trades, 3.2/day, 66.0% green, net -26.88, PF 0.813, avg win $0.423 vs avg loss $1.012, max DD $39.29, worst $-5.3. In-sample Apr-2025..Mar-2026: 3.4/day, 70.3% green, net -27.71, PF 0.918, max DD $62.79. Spread x2 stress: IS -99.03 / OOS -38.45. HONEST: NEGATIVE. Every M1-M4 variant tested was net negative after costs (trend-direction V: PF 0.55-0.70, about -$200 to -$1,100 per 6 months); this is the least-bad tweak (V turn after an M4 stretch, afternoon only). With zero costs the plain V is about break-even, so the spread + $0.06 commission is what sinks it. Expected live: auto-pause after ~30 closes if still negative. Caveat: Yahoo M1/M3 bars are noisier than the broker feed for EURUSD/GBPUSD/AUDUSD/NZDUSD/USDCAD (RSI correlation ~0.6-0.8).</div>
 </section>
-<div class="acct">Account 1600199066: balance <b>$199,836.79</b> · equity <b>$199,836.49</b> · as of Thu 10/8 2:27 AM ET</div>
+<div class="acct">Account 1600199066: balance <b>$199,836.73</b> · equity <b>$199,836.04</b> · as of Thu 10/8 2:32 AM ET</div>
 <section class="card live">
  <div class="hd"><h2>Running now</h2></div>
  <div>Scalp Consistency 1: <span class="tag" style="background:#1d2740;color:#9fb4e0">WAITING</span> <span class="k">(LIVE - armed)</span></div>
@@ -183,7 +185,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#1d2740;color:#9fb4e0">ARCHIVED</span></div>
   <div class="k">closed and stored 2026-10-07 (Owner order); final results below</div>
-  <div class="k">Last synced <b>2:28:04 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>Mon 6:05 PM ET</b></div>
+  <div class="k">Last synced <b>2:33:05 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>Mon 6:05 PM ET</b></div>
   <div class="k"><b>Consistency:</b> no closed trades yet (0/0) · open now: none</div>
     <div class="grid">
    <div class="st"><div class="k">Consistency (green closes)</div><div class="v mut">no closes yet</div><div class="cbar"><i style="width:0"></i><b title="75% target"></b></div><div class="k">no closed trades yet (0/0) · target 75% · green days 0/0</div><div class="k">open now: none</div></div>
@@ -212,7 +214,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#1d2740;color:#9fb4e0">ARCHIVED</span></div>
   <div class="k">closed and stored 2026-10-07 (Owner order); final results below</div>
-  <div class="k">Last synced <b>2:28:04 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>2:00 PM ET</b></div>
+  <div class="k">Last synced <b>2:33:05 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>2:00 PM ET</b></div>
   
     <div class="grid">
    <div class="st"><div class="k">Consistency (green closes)</div><div class="v neg">50%</div><div class="cbar"><i style="width:50%;background:#ff5a5a"></i><b title="75% target"></b></div><div class="k">1 green / 2 closes · target 75% · 0 green of 1 trading day(s) (0%)</div><div class="k">open now: none</div></div>
@@ -241,7 +243,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#1d2740;color:#9fb4e0">ARCHIVED</span></div>
   <div class="k">closed and stored 2026-10-07 (Owner order); final results below</div>
-  <div class="k">Last synced <b>2:28:04 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>not scheduled</b></div>
+  <div class="k">Last synced <b>2:33:05 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>not scheduled</b></div>
   
     <div class="grid">
    <div class="st"><div class="k">Consistency (green closes)</div><div class="v neg">0%</div><div class="cbar"><i style="width:0%;background:#ff5a5a"></i><b title="75% target"></b></div><div class="k">0 green / 3 closes · target 75% · 0 green of 1 trading day(s) (0%)</div><div class="k">open now: none</div></div>
@@ -273,7 +275,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#1d2740;color:#9fb4e0">ARCHIVED</span></div>
   <div class="k">closed and stored 2026-10-07 (Owner order); final results below</div>
-  <div class="k">Last synced <b>2:28:04 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>not scheduled</b></div>
+  <div class="k">Last synced <b>2:33:05 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>not scheduled</b></div>
   
     <div class="grid">
    <div class="st"><div class="k">Consistency (green closes)</div><div class="v pos">100%</div><div class="cbar"><i style="width:100%;background:#2ee68a"></i><b title="75% target"></b></div><div class="k">1 green / 1 closes · target 75% · 1 green of 1 trading day(s) (100%)</div><div class="k">open now: none</div></div>
@@ -305,7 +307,7 @@ fetch(location.pathname + '?t=' + Date.now(), {cache: 'no-store'}).then(r => r.t
  <div class="std">
   <div class="hd"><h3 style="margin:0">Trades · consistency · ratio</h3><span class="tag" style="background:#1d2740;color:#9fb4e0">ARCHIVED</span></div>
   <div class="k">closed and stored 2026-10-07 (Owner order); final results below</div>
-  <div class="k">Last synced <b>2:28:04 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>not scheduled</b></div>
+  <div class="k">Last synced <b>2:33:05 AM ET</b> · runner last check <b class="neg">2:40 PM ET (stale)</b> · next check <b>not scheduled</b></div>
   
     <div class="grid">
    <div class="st"><div class="k">Consistency (green closes)</div><div class="v pos">100%</div><div class="cbar"><i style="width:100%;background:#2ee68a"></i><b title="75% target"></b></div><div class="k">2 green / 2 closes · target 75% · 1 green of 1 trading day(s) (100%)</div><div class="k">open now: none</div></div>
