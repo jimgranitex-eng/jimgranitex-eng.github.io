@@ -1,0 +1,58 @@
+{
+ "title": "2026 Gift Guide: Gifts for PC Gamers",
+ "subtitle": "Our current gaming short list, gift-framed for the 2026 season. Three desk upgrades that get used every day — more picks join the list as our gaming reviews grow.",
+ "lane": "gaming",
+ "campaign": "guide_gaming_202610",
+ "scoring_note": "Ranked from our research-roundup verdicts (owner-review consensus + expert sources). Short list for now — more gaming picks are added as reviews publish. Not hands-on lab testing.",
+ "products": [
+  {
+   "name": "Logitech G502 HERO Gaming Mouse",
+   "score": 9.4,
+   "score_label": "Best-selling gaming mouse",
+   "specs": {
+    "Sensor": "25K HERO",
+    "Use": "FPS / all-round gaming"
+   },
+   "pros": [
+    "Best-seller for a reason"
+   ],
+   "cons": [],
+   "bridge_url": "/go/reviews/gaming/buy-logitech-g502-hero-gaming-mouse.html",
+   "badge": "Best overall",
+   "price": null
+  },
+  {
+   "name": "HyperX Cloud II Gaming Headset",
+   "score": 9.0,
+   "score_label": "The safe headset answer for years",
+   "specs": {
+    "Comfort": "Long-session comfort",
+    "Use": "Gaming + voice"
+   },
+   "pros": [
+    "Comfortable for long sessions"
+   ],
+   "cons": [],
+   "bridge_url": "/go/reviews/gaming/buy-hyperx-cloud-ii-gaming-headset.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "Keychron K2 Mechanical Keyboard",
+   "score": 8.8,
+   "score_label": "The gateway mechanical keyboard",
+   "specs": {
+    "Connect": "Wireless + wired",
+    "Layout": "75%",
+    "OS": "Mac / Windows"
+   },
+   "pros": [
+    "Best first mechanical board"
+   ],
+   "cons": [],
+   "bridge_url": "/go/reviews/gaming/buy-keychron-k2-mechanical-keyboard.html",
+   "badge": null,
+   "price": null
+  }
+ ]
+}
