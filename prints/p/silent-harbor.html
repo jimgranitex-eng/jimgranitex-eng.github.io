@@ -10,40 +10,34 @@
 <script src="../assets/js/config.js"></script>
 <script src="../assets/js/footprint-v2.js"></script>
 <script src="../assets/js/consent.js"></script>
-<script src="../assets/js/cart.js"></script>
 </head>
 <body data-fg-op="06-fine-art-prints" data-fg-placement="product" data-fg-campaign="06-fine-art-prints_launch_202610" data-tx-lane="prints">
 <a class="skip" href="#main">Skip to content</a>
-<div class="announce" style="background:#0f172a">Free US shipping on orders over $75 · Every piece is AI-generated original artwork</div>
+<div class="announce" style="background:#0f172a">Curated wall-art finds · We may earn a commission &mdash; at no cost to you</div>
 <header class="site-header"><div class="wrap">
 <a class="brand" href="../index.html">Silvius<span>Prints</span></a>
 <nav class="main-nav" aria-label="Main">
 <a href="../gallery.html">Gallery</a><a href="../gallery.html#Night Sky">Night Sky</a><a href="../gallery.html#Quiet Landscapes">Landscapes</a><a href="../gallery.html#Abstract">Abstract</a><a href="../gallery.html#City Light">City Light</a><a href="../about.html">About</a>
 </nav>
-<a class="cart-link" href="../cart.html" aria-label="Cart">Cart<span class="cart-count">0</span></a>
+
 </div></header>
 <main id="main">
 <nav aria-label="Breadcrumb" class="wrap" style="padding-top:1rem;font-size:.9rem"><a href="../index.html">Home</a> › <a href="../gallery.html">Gallery</a> › “Silent Harbor”</nav>
 <section class="wrap product">
 <div><img class="main" src="../assets/img/silent-harbor.jpg" alt="Moonlit harbor at night with a single sailboat silhouette on still dark water">
-<p class="disclosure">Artwork shown at screen resolution. Prints are produced at high resolution by Printful; final colors may vary slightly from screen.</p></div>
+<p class="disclosure">Reference image &mdash; the merchant&rsquo;s page shows the exact artwork you&rsquo;ll get.</p></div>
 <div class="product-info">
 <span class="badge">Night Sky Collection</span>
 <h1>“Silent Harbor”</h1>
 <p>A moonlit harbor, one sailboat, deep blue-black water. The quietest piece in the Night Sky collection.</p>
-<div class="field"><label for="fmt">Format &amp; size</label><select id="fmt"><option value="poster18">Poster 18×24 in — $45.00</option><option value="framed18">Framed 18×24 in — $89.00</option><option value="canvas24">Canvas 24×36 in — $119.00</option></select></div>
-<div class="field"><label for="qty">Quantity</label><div class="qty-row"><input id="qty" type="number" value="1" min="1" max="99" inputmode="numeric"></div></div>
-<div class="price" id="live-price" aria-live="polite"></div>
-<div class="add-row">
-<button class="btn" id="add" data-fg-event="add_to_cart" data-name="Silent Harbor">Add to Cart</button>
-<button class="btn secondary" id="buy">Buy Now</button>
-</div>
+<div class="price-note" style="font-size:.95rem;color:#9ca3af;margin:.5rem 0">Price varies &mdash; see today&rsquo;s price on Amazon</div>
+<a class="btn" href="../../go/prints/silent-harbor.html" data-track data-fg-event="affiliate_click" data-name="Silent Harbor">View on Amazon</a>
+<p class="disclosure"><strong>Affiliate link:</strong> we may earn a commission if you buy &mdash; at no cost to you. Amazon is the seller: they handle your order, shipping, returns, and support. We never see your payment or details. <a href="../affiliate-disclosure.html">Learn more</a></p>
 <p class="disclosure"><strong>AI-generated original artwork.</strong> No stock photos, no borrowed images. Printed to order on archival materials. Free US shipping over $75.</p>
 <div class="accordion">
 <details><summary>About this piece</summary><p>AI-generated original artwork: moonlit harbor, still water, single sailboat silhouette, deep blue-black palette, long-exposure feel.</p></details>
-<details><summary>Materials</summary><p>Posters: matte archival paper. Framed: black or white wood frame with shatterproof glazing. Canvas: 1.5" gallery wrap, ready to hang.</p></details>
-<details><summary>Shipping</summary><p>Made to order in 2–7 business days plus transit. Free US shipping over $75. See <a href="../shipping.html">Shipping</a>.</p></details>
-<details><summary>Returns</summary><p>30 days on damaged or misprinted pieces — reprint or refund, your call. See <a href="../returns.html">Returns &amp; Refunds</a>.</p></details>
+<details><summary>About buying</summary><p>We link to comparable wall art on Amazon &mdash; posters, framed prints, and canvas in standard sizes. What you see on the merchant&rsquo;s page is exactly what ships.</p></details>
+<details><summary>How this works</summary><p>We&rsquo;re an affiliate curator, not a print shop. Clicking &ldquo;View on Amazon&rdquo; takes you to Amazon where you can browse comparable wall art, see today&rsquo;s price, and buy. We may earn a commission &mdash; at no cost to you. Amazon handles your order, shipping, returns, and support. <a href="../affiliate-disclosure.html">Full disclosure</a>.</p></details>
 </div></div></section>
 <section class="section"><div class="wrap"><h2>More from Night Sky</h2><div class="grid"><article class="card">
 <a href="../p/blood-moon.html" aria-label="Blood Moon Rising"><img src="../assets/img/blood-moon.jpg" alt="Large amber-red moon low over a dark mountain ridge under scattered stars" loading="lazy"></a>
@@ -60,41 +54,19 @@
 <div class="price">from $29.00</div>
 <a class="btn" href="../p/constellation-4.html" data-track data-fg-event="view_item" data-name="Constellation Study No. 4" data-value="29.0">View</a>
 </div></article></div></div></section>
-<script>
-var FORMATS = {"poster18": {"label": "Poster 18\u00d724 in", "price": 4500}, "framed18": {"label": "Framed 18\u00d724 in", "price": 8900}, "canvas24": {"label": "Canvas 24\u00d736 in", "price": 11900}};
-var PID = "silent-harbor", PTITLE = "Silent Harbor", PIMG = "assets/img/" + "silent-harbor.jpg";
-function curFmt(){ return document.getElementById('fmt').value; }
-function paint(){ var f = FORMATS[curFmt()];
-  document.getElementById('live-price').textContent = '$' + (f.price/100).toFixed(2);
-  document.getElementById('add').setAttribute('data-value', f.price/100); }
-document.getElementById('fmt').addEventListener('change', paint); paint();
-document.getElementById('add').addEventListener('click', function(){
-  var q = Math.max(1, parseInt(document.getElementById('qty').value||'1',10));
-  GDCart.add({id:PID+':'+curFmt(), name:PTITLE+' — '+FORMATS[curFmt()].label, variant:'', price:FORMATS[curFmt()].price, qty:q, img:PIMG});
-  location.href = '../cart.html';
-});
-document.getElementById('buy').addEventListener('click', function(){
-  var q = Math.max(1, parseInt(document.getElementById('qty').value||'1',10));
-  GDCart.add({id:PID+':'+curFmt(), name:PTITLE+' — '+FORMATS[curFmt()].label, variant:'', price:FORMATS[curFmt()].price, qty:q, img:PIMG});
-  GDCart.checkout();
-});
-</script>
 </main>
 <footer class="site-footer"><div class="wrap">
 <div><h2>Gallery</h2><a href="../gallery.html">All Prints</a><a href="../about.html">About the Art</a><a href="../gallery.html#Night Sky">Night Sky</a><a href="../gallery.html#City Light">City Light</a></div>
-<div><h2>Help</h2><a href="../shipping.html">Shipping</a><a href="../returns.html">Returns &amp; Refunds</a><a href="../accessibility.html">Accessibility</a></div>
+<div><h2>Help</h2><a href="../affiliate-disclosure.html">Affiliate Disclosure</a><a href="../accessibility.html">Accessibility</a></div>
 <div><h2>Legal</h2><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Service</a><a href="../cookies.html">Cookie Policy</a><a href="../do-not-sell.html">Do Not Sell or Share</a></div>
 <div><h2>For collectors</h2><p style="font-size:.9rem">New collections drop monthly. Email only, unsubscribe anytime.</p>
-<form action="{{KIT_FORM_ACTION}}" method="post" onsubmit="return psNews(this)"><input type="email" name="email" required placeholder="you@example.com" style="width:100%;padding:.6rem;border-radius:8px;border:1px solid #374151;margin-bottom:.5rem" aria-label="Email address"><button class="btn" type="submit" style="width:100%">Notify me</button></form></div>
+<form action="https://jimgranitex-eng-github-io.onrender.com/api/subscribe" method="post" data-subscribe><input type="email" name="email" required placeholder="you@example.com" style="width:100%;padding:.6rem;border-radius:8px;border:1px solid #374151;margin-bottom:.5rem" aria-label="Email address"><button class="btn" type="submit" style="width:100%">Notify me</button></form></div>
 </div>
 <div class="legal-bar"><div class="wrap">
 <span>© 2026 {{COMPANY_NAME}}. All rights reserved.</span>
 <a href="../cookies.html" style="color:#9ca3af">Cookie Policy</a>
 <a href="#" data-consent-open style="color:#9ca3af">Cookie settings</a>
-<span>Secure checkout by Stripe. Prints made to order by Printful.</span>
+<span>Affiliate curator &mdash; we never handle payments, orders, or customer data.</span>
 </div></div></footer>
-<script>
-function psNews(f){ var a=(window.STORE_CONFIG||{}).kitFormAction||'';
-  if(!a || a.indexOf('{{')===0){ alert('The collector list opens as soon as the signup form is connected.'); return false; } return true; }
-</script>
+<script src="../assets/js/subscribe.js"></script>
 </body></html>
