@@ -27,7 +27,10 @@
 <p class="note">The exact starting points from a real editing workflow. Free mini-pack, then the full library if you want it.</p>
 <div class="links">
 <div class="step"><span class="n">1</span><div><div class="t">Free Mini-Pack</div><div class="s">4 presets. No card, just your email.</div>
-<button class="btn" id="free" data-fg-event="funnel_free" data-name="mini-pack" data-value="0">Get the free pack</button></div></div>
+<form id="free-form" data-subscribe-funnel style="display:flex;gap:.5rem;margin-top:.5rem;flex-wrap:wrap">
+<input type="email" name="email" required placeholder="you@example.com" aria-label="Email address" style="flex:1;min-width:12rem;padding:.7rem;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#e5e7eb">
+<button class="btn" type="submit">Get the free pack</button></form>
+<p class="nl-msg" id="free-msg" hidden style="font-size:.85rem;margin-top:.4rem"></p></div></div>
 <div class="step"><span class="n">2</span><div><div class="t">Golden Hour Essentials — $1</div><div class="s">The 6-preset tripwire. Less than a coffee.</div>
 <button class="btn" id="trip" data-fg-event="funnel_tripwire" data-name="tripwire-1" data-value="1">Get it for $1</button></div></div>
 <div class="step"><span class="n">3</span><div><div class="t">Complete Preset Library — $29</div><div class="s">All 30 presets + mobile DNGs + install guide.</div>
@@ -64,12 +67,24 @@
   }
   document.getElementById('trip').addEventListener('click', function(){ go('stripeTripwireLink','funnel_tripwire','tripwire-1',1); });
   document.getElementById('bun').addEventListener('click', function(){ go('stripeBundleLink','funnel_bundle','bundle-29',29); });
-  document.getElementById('free').addEventListener('click', function(){
-    var a = C.kitFormAction || '';
-    if (window.__fgFootprint) window.__fgFootprint('funnel_free', {name:'mini-pack', value:0});
-    if (!a || a.indexOf('{{') === 0) { alert('The free pack form opens as soon as the email signup is connected.'); return; }
-    location.href = a;
-  });
+  (function(){
+    var form = document.getElementById('free-form'), msg = document.getElementById('free-msg');
+    if (!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = form.querySelector('input[type=email]').value || '';
+      if (window.__fgFootprint) window.__fgFootprint('funnel_free', {name:'mini-pack', value:0});
+      fetch((C.subscribeEndpoint || ''), { method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({email: email, source: 'kitchen-hub'}) })
+        .then(function(r){ return r.json().then(function(d){ return {ok: r.ok, d: d}; }); })
+        .then(function(x){
+          msg.hidden = false;
+          msg.textContent = x.d.message || (x.ok ? 'Check your inbox to confirm.' : 'Something went wrong.');
+          if (x.ok) form.reset();
+        })
+        .catch(function(){ msg.hidden = false; msg.textContent = 'Something went wrong — try again.'; });
+    });
+  })();
   /* affiliate picks: render from picks.json; hide section while empty.
      Works from file:// too (fetch blocked there) — the catch keeps the
      section hidden instead of erroring. */
