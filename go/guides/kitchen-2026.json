@@ -1,0 +1,62 @@
+{
+ "title": "2026 Gift Guide: Gifts for Home Cooks",
+ "subtitle": "Our current kitchen short list, gift-framed for the 2026 season. Three workhorses we'd give without hesitation — more picks join the list as our kitchen reviews grow.",
+ "lane": "kitchen",
+ "campaign": "guide_kitchen_202610",
+ "scoring_note": "Ranked from our research-roundup verdicts (owner-review consensus + expert sources). Short list for now — more kitchen picks are added as reviews publish. Not hands-on lab testing.",
+ "products": [
+  {
+   "name": "Lodge 12\" Cast Iron Skillet",
+   "score": 9.5,
+   "score_label": "4.7 stars owner consensus — our pick for most buyers",
+   "specs": {
+    "Finish": "Pre-seasoned",
+    "Made in": "USA",
+    "Size": "12 inch",
+    "Weight": "~8 lbs"
+   },
+   "pros": [
+    "Buy-it-for-life workhorse",
+    "Sears better than nonstick"
+   ],
+   "cons": [],
+   "bridge_url": "/go/reviews/kitchen/buy-lodge-12-cast-iron-skillet.html",
+   "badge": "Best overall",
+   "price": null
+  },
+  {
+   "name": "Victorinox Fibrox Pro 8\" Chef's Knife",
+   "score": 9.0,
+   "score_label": "Topped America's Test Kitchen rankings for years",
+   "specs": {
+    "Blade": "8 inch",
+    "Handle": "Fibrox Pro grip",
+    "Verdict": "Best for most home cooks"
+   },
+   "pros": [
+    "Pro performance, home price"
+   ],
+   "cons": [],
+   "bridge_url": "/go/reviews/kitchen/buy-victorinox-fibrox-pro-8-chef-knife.html",
+   "badge": "Best value",
+   "price": null
+  },
+  {
+   "name": "KitchenAid Artisan Stand Mixer",
+   "score": 8.8,
+   "score_label": "The default stand mixer recommendation",
+   "specs": {
+    "Bowl": "5 quart",
+    "Made in": "Ohio",
+    "Speeds": "10"
+   },
+   "pros": [
+    "The benchmark for a reason"
+   ],
+   "cons": [],
+   "bridge_url": "/go/reviews/kitchen/buy-kitchenaid-artisan-stand-mixer.html",
+   "badge": "Best upgrade",
+   "price": null
+  }
+ ]
+}
