@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Cart — Silvius Prints</title>
+<meta name="description" content="Review your cart and check out securely with Stripe.">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>window.__fp_hold = true; /* consent default-deny: released by consent.js after Analytics choice */</script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/footprint-v2.js"></script>
+<script src="assets/js/consent.js"></script>
+<script src="assets/js/cart.js"></script>
+</head>
+<body data-fg-op="06-fine-art-prints" data-fg-placement="cart" data-fg-campaign="06-fine-art-prints_launch_202610" data-tx-lane="prints">
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce" style="background:#0f172a">Free US shipping on orders over $75 · Every piece is AI-generated original artwork</div>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html">Silvius<span>Prints</span></a>
+<nav class="main-nav" aria-label="Main">
+<a href="gallery.html">Gallery</a><a href="gallery.html#Night Sky">Night Sky</a><a href="gallery.html#Quiet Landscapes">Landscapes</a><a href="gallery.html#Abstract">Abstract</a><a href="gallery.html#City Light">City Light</a><a href="about.html">About</a>
+</nav>
+<a class="cart-link" href="cart.html" aria-label="Cart">Cart<span class="cart-count">0</span></a>
+</div></header>
+<main id="main">
+<section class="section"><div class="wrap"><h1>Your Cart</h1><div id="cart-wrap"></div></div></section>
+<script>
+function renderCart(){
+  var items = GDCart.items(), w = document.getElementById('cart-wrap');
+  if(!items.length){ w.innerHTML = '<p>Your cart is empty. <a href="gallery.html">The gallery is this way.</a></p>'; return; }
+  var rows = items.map(function(i,idx){
+    return '<tr><td><strong>'+i.name+'</strong></td>'+
+    '<td><input type="number" min="0" max="99" value="'+i.qty+'" data-i="'+idx+'" aria-label="Quantity for '+i.name+'" style="width:4.5rem;padding:.4rem"></td>'+
+    '<td>'+GDCart.money(i.price)+'</td><td>'+GDCart.money(i.price*i.qty)+'</td>'+
+    '<td><button data-r="'+idx+'" class="btn secondary" style="padding:.4rem .8rem">Remove</button></td></tr>';
+  }).join('');
+  var sub = GDCart.total(), ship = sub >= 7500 ? 0 : 600;
+  w.innerHTML = '<table class="cart"><thead><tr><th>Item</th><th>Qty</th><th>Each</th><th>Total</th><th></th></tr></thead><tbody>'+rows+'</tbody></table>'+
+  '<div class="cart-totals"><div class="row"><span>Subtotal</span><span>'+GDCart.money(sub)+'</span></div>'+
+  '<div class="row"><span>Shipping (est.)</span><span>'+(ship===0?'FREE':GDCart.money(ship))+'</span></div>'+
+  '<div class="row grand"><span>Total</span><span>'+GDCart.money(sub+ship)+'</span></div>'+
+  '<button class="btn" id="co" style="width:100%" data-fg-event="begin_checkout" data-value="'+(sub/100)+'">Check Out Securely</button>'+
+  '<p style="font-size:.85rem;color:#4b5563">Checkout is hosted by Stripe — card data never touches our servers.</p></div>';
+  w.querySelectorAll('input[data-i]').forEach(function(inp){ inp.addEventListener('change', function(){
+    var it = GDCart.items()[+inp.getAttribute('data-i')]; GDCart.setQty(it.id, it.variant, +inp.value); renderCart(); }); });
+  w.querySelectorAll('button[data-r]').forEach(function(b){ b.addEventListener('click', function(){
+    var it = GDCart.items()[+b.getAttribute('data-r')]; GDCart.remove(it.id, it.variant); renderCart(); }); });
+  document.getElementById('co').addEventListener('click', function(){ GDCart.checkout(); });
+}
+document.addEventListener('DOMContentLoaded', renderCart);
+</script>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div><h2>Gallery</h2><a href="gallery.html">All Prints</a><a href="about.html">About the Art</a><a href="gallery.html#Night Sky">Night Sky</a><a href="gallery.html#City Light">City Light</a></div>
+<div><h2>Help</h2><a href="shipping.html">Shipping</a><a href="returns.html">Returns &amp; Refunds</a><a href="accessibility.html">Accessibility</a></div>
+<div><h2>Legal</h2><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="cookies.html">Cookie Policy</a><a href="do-not-sell.html">Do Not Sell or Share</a></div>
+<div><h2>For collectors</h2><p style="font-size:.9rem">New collections drop monthly. Email only, unsubscribe anytime.</p>
+<form action="{{KIT_FORM_ACTION}}" method="post" onsubmit="return psNews(this)"><input type="email" name="email" required placeholder="you@example.com" style="width:100%;padding:.6rem;border-radius:8px;border:1px solid #374151;margin-bottom:.5rem" aria-label="Email address"><button class="btn" type="submit" style="width:100%">Notify me</button></form></div>
+</div>
+<div class="legal-bar"><div class="wrap">
+<span>© 2026 {{COMPANY_NAME}}. All rights reserved.</span>
+<a href="cookies.html" style="color:#9ca3af">Cookie Policy</a>
+<a href="#" data-consent-open style="color:#9ca3af">Cookie settings</a>
+<span>Secure checkout by Stripe. Prints made to order by Printful.</span>
+</div></div></footer>
+<script>
+function psNews(f){ var a=(window.STORE_CONFIG||{}).kitFormAction||'';
+  if(!a || a.indexOf('{{')===0){ alert('The collector list opens as soon as the signup form is connected.'); return false; } return true; }
+</script>
+</body></html>
