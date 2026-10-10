@@ -1,0 +1,59 @@
+{
+ "title": "2026 Gift Guide: Gifts for Hikers & Trail People",
+ "subtitle": "Our current outdoor short list, gift-framed for the 2026 season. Three trail-proven picks that get used every week — more picks join the list as our sports reviews grow.",
+ "lane": "sports",
+ "campaign": "guide_sports_202610",
+ "scoring_note": "Ranked from our research-roundup verdicts (owner-review consensus + expert sources). Short list for now — more sports picks are added as reviews publish. Not hands-on lab testing.",
+ "products": [
+  {
+   "name": "Osprey Talon 22 Hiking Daypack",
+   "score": 9.4,
+   "score_label": "The benchmark hiking daypack",
+   "specs": {
+    "Backpanel": "Ventilated",
+    "Capacity": "22L",
+    "Use": "Day hiking"
+   },
+   "pros": [
+    "Ventilation that actually works"
+   ],
+   "cons": [],
+   "bridge_url": "/go/reviews/sports/buy-osprey-talon-22-hiking-daypack.html",
+   "badge": "Best overall",
+   "price": null
+  },
+  {
+   "name": "Hydro Flask 32oz Wide Mouth",
+   "score": 9.0,
+   "score_label": "The insulated bottle that defined the category",
+   "specs": {
+    "Capacity": "32oz",
+    "Keeps": "Cold 24h / hot 12h",
+    "Mouth": "Wide"
+   },
+   "pros": [
+    "Category-defining insulation"
+   ],
+   "cons": [],
+   "bridge_url": "/go/reviews/sports/buy-hydro-flask-32-wide-mouth.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "Salomon Speedcross Trail Runners",
+   "score": 8.8,
+   "score_label": "The default for muddy, technical trails",
+   "specs": {
+    "Lugs": "Aggressive Contagrip",
+    "Terrain": "Mud / technical trails"
+   },
+   "pros": [
+    "Grip where others slip"
+   ],
+   "cons": [],
+   "bridge_url": "/go/reviews/sports/buy-salomon-speedcross-trail-runners.html",
+   "badge": null,
+   "price": null
+  }
+ ]
+}
