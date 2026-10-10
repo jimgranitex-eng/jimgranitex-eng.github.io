@@ -57,10 +57,8 @@ if(go)go.textContent='Continuar a Amazon \u2192';
 })();
 </script>
 <script>
-var MERCHANT = 'https://www.amazon.com/s?k=dog+stickers+pack&tag=granitex60-20&utm_source=silvius&utm_medium=affiliate&utm_campaign=05-dog-store_launch_202610';
-function track(){ try { if (window.__fgFootprint) window.__fgFootprint('affiliate_click', {product: 'sticker-pack', merchant: 'amazon', op: '05-dog-store'}); } catch(e){} }
-track();
-setTimeout(function(){ location.href = MERCHANT; }, 1600);
+window.__TH_CONFIG = { merchant: 'https://www.amazon.com/s?k=dog+stickers+pack&tag=granitex60-20&utm_source=silvius&utm_medium=affiliate&utm_campaign=05-dog-store_launch_202610', product: 'sticker-pack', op: '05-dog-store' };
 </script>
+<script src="../assets/js/ticketed-handoff.js"></script>
 </body>
 </html>
