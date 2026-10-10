@@ -1,0 +1,30 @@
+{
+ "updated": "2026-10-09",
+ "videos": [
+  {
+   "id": "SJhmmmelph4",
+   "title": "The Paper Test: Is Your Knife Actually Sharp? (10s Test)",
+   "date": "2026-10-01",
+   "platform": "YouTube"
+  },
+  {
+   "id": "OucVkj1Gt9U",
+   "title": "KitchenAid's 2026 Luminaire: $700 Mixer That GLOWS",
+   "date": "2026-09-30",
+   "platform": "YouTube"
+  },
+  {
+   "id": "T06Hw98a-nQ",
+   "title": "Kitchen Short \u2014 June 22, 2026",
+   "date": "2026-06-22",
+   "platform": "YouTube"
+  },
+  {
+   "id": "2xyvlUF4BbI",
+   "title": "Air Fryer Review \u2014 Is It Worth It?",
+   "date": "2026-06-11",
+   "platform": "YouTube"
+  }
+ ],
+ "how_to_update": "Add TikTok embeds: append {id, title, date, platform:'TikTok', url} objects. The hub renders this file."
+}
