@@ -1,7 +1,24 @@
-# Silvius Store Server — runbook
+# Silvius affiliate + email server
 
-Checkout + POD fulfillment backend for `shop.silvius.world` (op 05) and
-`prints.silvius.world` (op 06). Zero npm dependencies — plain Node 18+.
+Operation AFFILIATE-PIVOT (2026-10-10): affiliate routing only — no checkout, no payments, no fulfillment. We route, merchants sell.
+
+## What it does
+- `GET /health` — liveness
+- `GET /go/<lane>/<slug>` — 302 affiliate bridge to the merchant (mirrors the static `go/` pages)
+- `POST /api/subscribe` — email capture, double opt-in via Resend (self-built Kit replacement)
+- `GET /api/confirm?token=` — confirm subscription; sends Email 1, schedules Email 2 (day 3) and Email 3 (day 7)
+- `GET /api/unsubscribe?token=` — one-click unsubscribe
+- `GET /api/export?key=ADMIN_KEY` — CSV export of confirmed subscribers
+- Retired (410): `/api/checkout/session`, `/webhooks/stripe`
+
+## Email sequence
+From `ready/01-preset-packs/funnel-copy.md`: Email 1 (delivery + $1 tripwire, on confirm), Email 2 (day 3, upsell), Email 3 (day 7, testimonial ask). Sent via Resend. Every email carries List-Unsubscribe + footer link.
+
+## Storage
+SQLite via `node:sqlite` (Node 22.5+), automatic JSON-file fallback. Tables: `subscribers`, `scheduled`.
+
+## Deploy
+Render web service, `rootDir: server`, build `npm install`, start `node server.js`. Env vars in `render.yaml` / `.env.example`.
 
 ## What it does
 
