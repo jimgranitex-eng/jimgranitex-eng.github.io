@@ -7,15 +7,13 @@ services:
     buildCommand: npm install
     startCommand: node server.js
     envVars:
-      - key: STRIPE_SECRET_KEY
-        sync: false
-      - key: STRIPE_WEBHOOK_SECRET
-        sync: false
-      - key: PRINTFUL_API_KEY
-        sync: false
-      - key: PRINTIFY_API_KEY
-        sync: false
       - key: RESEND_API_KEY
         sync: false
-      - key: NODE_ENV
-        value: production
+      - key: ADMIN_KEY
+        sync: false
+      - key: FROM_EMAIL
+        value: James <hello@silvius.world>
+      - key: BASE_URL
+        value: https://jimgranitex-eng-github-io.onrender.com
+      - key: ALLOWED_ORIGINS
+        value: https://jimgranitex-eng.github.io,https://go.silvius.world
