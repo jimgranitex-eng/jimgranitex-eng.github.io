@@ -15,6 +15,7 @@ const http = require('http');
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const geoRoute = require('./geo_route');
 
 const PORT = process.env.PORT || 8787;
 const ALLOWED = (process.env.ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean);
@@ -156,6 +157,38 @@ const TEMPLATES = {
   }),
 };
 
+/* ---------------- Spanish templates (es) — STAGED 2026-10-10, NOT yet wired ----------------
+   Frozen ES FTC disclosure block (human-review quality). This exact block ships
+   identically in all 3 sequence emails (email1_es/email2_es/email3_es). DO NOT
+   reword, paraphrase, or drift it per-email — single source of truth is DISCLOSURE_ES.
+   Full wiring plan (language flag) is in I18N-WIRING.md — it requires a schema
+   change (subscribers.lang), so it is documented, not improvised. */
+const DISCLOSURE_ES = 'Divulgación: como afiliados de Amazon, podemos ganar una comisión por compras que califiquen, sin costo adicional para ti.';
+function disclosureEsFooter() {
+  return `<p style="font-size:12px;color:#888">${DISCLOSURE_ES}</p>`;
+}
+function unsubFooterEs(unsubUrl) {
+  return `<p style="font-size:12px;color:#888">Recibes esto porque te registraste para recibir presets y selecciones de fotos gratis. <a href="${unsubUrl}">Darse de baja</a> — un clic, inmediato.</p>`;
+}
+const TEMPLATES_ES = {
+  confirm_es: (s) => ({
+    subject: 'Confirma tu email — tus presets gratis te esperan',
+    html: `<p>Un clic para confirmar:</p><p><a href="${BASE_URL}/api/confirm?token=${s.confirm_token}">Sí, envíame los presets gratis</a></p><p>Si no solicitaste esto, ignóralo.</p>`,
+  }),
+  email1_es: (s) => ({
+    subject: 'Tus 4 presets gratis ya están aquí (+ una oferta de $1, solo 48 horas)',
+    html: `<p>Aquí está tu mini-pack gratis — 4 presets y la guía de instalación:</p><p><a href="${FREE_PACK_URL}">Descargar el pack gratis</a></p><p>La instalación toma 2 minutos (la guía cubre Classic, CC y móvil).</p><p>Un aviso rápido: hay una oferta única — el pack completo Golden Hour de 10 presets por $1, solo durante 48 horas. Sin presión; el pack gratis es tuyo para siempre.</p><p>Feliz edición,<br>James</p><p>P.D.: Respóndeme con tu primera edición — leo cada mensaje.</p>` + disclosureEsFooter() + unsubFooterEs(`${BASE_URL}/api/unsubscribe?token=${s.unsub_token}`),
+  }),
+  email2_es: (s) => ({
+    subject: 'La oferta de $1 vence mañana',
+    html: `<p>Un recordatorio rápido: el pack Golden Hour por $1 desaparece mañana. Después costará $19 por sí solo — o $29 por los tres packs juntos.</p><p>Si te gusta la hora dorada, $1 es el experimento más barato que harás este año: <a href="${TRIPWIRE_URL}">Conseguirlo por $1</a></p><p>O la biblioteca completa (30 presets): <a href="${BUNDLE_URL}">Conseguir el bundle — $29</a></p><p>Reembolso de 30 días en todo. Cero riesgo; el pack gratis es tuyo de todos modos.</p>` + disclosureEsFooter() + unsubFooterEs(`${BASE_URL}/api/unsubscribe?token=${s.unsub_token}`),
+  }),
+  email3_es: (s) => ({
+    subject: 'Muéstrame lo que hiciste',
+    html: `<p>Ya llevas una semana con los presets — ¿qué hiciste con ellos?</p><p>Respóndeme con un antes/después (o solo el después). En el resumen semanal destaco las ediciones de los lectores, con crédito y un enlace a tu página.</p><p>¿Todavía no editaste nada? No pasa nada — la sección de ajustes de 30 segundos de la guía de instalación es la forma más rápida de enamorarte del preset #1.</p><p>— James</p>` + disclosureEsFooter() + unsubFooterEs(`${BASE_URL}/api/unsubscribe?token=${s.unsub_token}`),
+  }),
+};
+
 /* ---------------- scheduler ---------------- */
 const timers = new Map();
 function scheduleDue() {
@@ -203,13 +236,21 @@ const server = http.createServer(async (req, res) => {
     // health
     if (req.method === 'GET' && url.pathname === '/health') return send(res, 200, { ok: true }, origin);
 
-    // server-side affiliate bridge: /go/<lane>/<slug> -> 302
+    // server-side affiliate bridge: /go/<lane>/<slug> -> geo-routed 302
     if (req.method === 'GET' && url.pathname.startsWith('/go/')) {
       const key = url.pathname.slice(4);
       const dest = BRIDGE[key];
       if (!dest) return send(res, 404, { error: 'unknown bridge' }, origin);
-      console.log('bridge 302', key);
-      res.writeHead(302, { Location: dest }); res.end(); return;
+      // geo-routing (TagFlow-style, ./geo_route.js): pull the product keyword
+      // out of the stored bridge URL so the URL shape stays identical.
+      let keyword = '';
+      try { keyword = new URL(dest).searchParams.get('k') || ''; } catch { /* keep '' */ }
+      const detected = geoRoute.detectCountry({ url: req.url, headers: req.headers });
+      const r = geoRoute.route({ cc: detected.cc, keyword });
+      console.log('bridge 302', key, 'cc=' + (r.country || '??'),
+        '->', r.domain, r.reason, 'tag=' + r.tag);
+      res.writeHead(302, { Location: r.url, ...geoRoute.complianceHeaders() });
+      res.end(); return;
     }
 
     // retired commerce endpoints (affiliate pivot 2026-10-10)
