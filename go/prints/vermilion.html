@@ -26,36 +26,7 @@ a.go{display:inline-block;background:#f59e0b;color:#111827;font-weight:700;paddi
 <p class="ftc"><strong>Affiliate disclosure:</strong> we may earn a commission if you buy &mdash; at no cost to you. We never see your order, payment, or personal details. Amazon is the seller, ships your order, and handles returns and support.</p>
 <p><a class="go" id="go" href="https://www.amazon.com/s?k=red+abstract+wall+art&tag=granitex60-20&utm_source=silvius&utm_medium=affiliate&utm_campaign=06-fine-art-prints_launch_202610">Continue to Amazon &rarr;</a></p>
 </div>
-<script>
-// I18N-ES-INTERSTITIAL: if visitor's browser is Spanish, swap interstitial strings to pre-translated Spanish.
-// Merchant URL (Amazon tag + UTMs) NEVER changes.
-(function(){
-try{
-var lg=((navigator.language||'en')+'').slice(0,2).toLowerCase();
-if(lg!=='es')return;
-document.documentElement.lang='es';
-var h1=document.querySelector('.box h1');
-if(h1)h1.textContent='Llev\u00e1ndote a Amazon\u2026';
-var sub=document.querySelector('.box p:not(.ftc)');
-if(sub){
-  var st=sub.querySelector('strong');
-  var nm=st?st.textContent:'';
-  sub.textContent='';
-  sub.appendChild(document.createTextNode('Elegiste '));
-  var b=document.createElement('strong');b.textContent=nm;sub.appendChild(b);
-  sub.appendChild(document.createTextNode('. Te estamos llevando a Amazon, donde puedes ver el precio de hoy y comprarlo all\u00ed.'));
-}
-var ftc=document.querySelector('.box p.ftc');
-if(ftc){
-  ftc.textContent='';
-  var fb=document.createElement('strong');fb.textContent='Divulgaci\u00f3n de afiliado: ';ftc.appendChild(fb);
-  ftc.appendChild(document.createTextNode('como afiliado de Amazon, ganamos comisiones por compras que califiquen, sin costo adicional para ti. No vemos tu pedido, tu pago ni tus datos personales. Amazon es el vendedor, env\u00eda tu pedido y gestiona devoluciones y soporte.'));
-}
-var go=document.querySelector('a.go');
-if(go)go.textContent='Continuar a Amazon \u2192';
-}catch(e){}
-})();
-</script>
+<script src="../assets/js/i18n.js" data-merchant="amazon-us"></script>
 <script>
 window.__TH_CONFIG = { merchant: 'https://www.amazon.com/s?k=red+abstract+wall+art&tag=granitex60-20&utm_source=silvius&utm_medium=affiliate&utm_campaign=06-fine-art-prints_launch_202610', product: 'vermilion', op: '06-fine-art-prints' };
 </script>
