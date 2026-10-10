@@ -1,0 +1,162 @@
+{
+ "title": "2026 Gift Guide: Gifts for Dog Lovers",
+ "subtitle": "Gifts for the dog (and the dog-obsessed human) in your life — our own Granit designs, gift-framed for the 2026 season. Everything ships from the merchant; live prices on their page.",
+ "lane": "dog",
+ "campaign": "guide_dog_202610",
+ "scoring_note": "Ranked by our curation — these are original Granit designs we recommend, reordered for gift-giving. Not lab testing; prices live on the merchant page.",
+ "products": [
+  {
+   "name": "Granit All-Over Print Dog Bandana",
+   "score": 9.5,
+   "score_label": "Curated pick #1 — the signature piece",
+   "specs": {
+    "Design": "Brown/cream camo, GRANIT wordmark",
+    "For": "Dogs with personality"
+   },
+   "pros": [
+    "Signature design",
+    "All-over print"
+   ],
+   "cons": [],
+   "bridge_url": "/go/dog/bandana-granit.html",
+   "badge": "Best overall",
+   "price": null
+  },
+  {
+   "name": "Best Boy / Best Girl Pet Hoodie",
+   "score": 9.2,
+   "score_label": "Curated pick #2",
+   "specs": {
+    "Color": "Black",
+    "Design": "Bold BEST BOY / BEST GIRL chest print"
+   },
+   "pros": [
+    "Cold-morning walks, solved"
+   ],
+   "cons": [],
+   "bridge_url": "/go/dog/pet-hoodie.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "My Dog Is Cooler Than Your Kid Tee",
+   "score": 9.0,
+   "score_label": "Curated pick #3",
+   "specs": {
+    "Design": "Clean type, white or black",
+    "Fit": "Bella+Canvas 3001"
+   },
+   "pros": [
+    "Says what every dog person is thinking"
+   ],
+   "cons": [],
+   "bridge_url": "/go/dog/human-tee.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "Dog-Face Collage Fleece Blanket (50x60)",
+   "score": 8.8,
+   "score_label": "Curated pick #4",
+   "specs": {
+    "Design": "All-over mixed-breed dog faces",
+    "Material": "Soft fleece"
+   },
+   "pros": [
+    "The couch's new centerpiece"
+   ],
+   "cons": [],
+   "bridge_url": "/go/dog/fleece-blanket.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "Dog Person Ceramic Mug (11oz)",
+   "score": 8.6,
+   "score_label": "Curated pick #5",
+   "specs": {
+    "Design": "DOG PERSON text + paw icon",
+    "Size": "11oz ceramic"
+   },
+   "pros": [
+    "The morning announcement"
+   ],
+   "cons": [],
+   "bridge_url": "/go/dog/mug-dog-person.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "Paw-Print All-Over Tote Bag",
+   "score": 8.5,
+   "score_label": "Curated pick #6",
+   "specs": {
+    "Design": "Cream paw-print repeat",
+    "Use": "Groceries, library, treat transport"
+   },
+   "pros": [],
+   "cons": [],
+   "bridge_url": "/go/dog/tote-paw.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "Feed Me Pet Bowl Mat",
+   "score": 8.3,
+   "score_label": "Curated pick #7",
+   "specs": {
+    "Design": "FEED ME text",
+    "Use": "Under bowls"
+   },
+   "pros": [],
+   "cons": [],
+   "bridge_url": "/go/dog/bowl-mat.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "Bone-Pattern Pet Crewneck Sweatshirt",
+   "score": 8.2,
+   "score_label": "Curated pick #8",
+   "specs": {
+    "Design": "Bone-pattern repeat",
+    "Style": "Crewneck"
+   },
+   "pros": [],
+   "cons": [],
+   "bridge_url": "/go/dog/pet-sweatshirt.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "Granit Dog Chest-Logo Hoodie",
+   "score": 8.0,
+   "score_label": "Curated pick #9",
+   "specs": {
+    "Design": "Chest logo",
+    "For": "Humans"
+   },
+   "pros": [],
+   "cons": [],
+   "bridge_url": "/go/dog/human-hoodie.html",
+   "badge": null,
+   "price": null
+  },
+  {
+   "name": "Matching Set: Bandana + Human Tee",
+   "score": 8.0,
+   "score_label": "Curated pick #10 — bundle",
+   "specs": {
+    "Includes": "Dog bandana + human tee",
+    "Match": "Same design"
+   },
+   "pros": [
+    "Owner + dog matching"
+   ],
+   "cons": [],
+   "bridge_url": "/go/dog/bundle-bandana-tee.html",
+   "badge": "Best bundle",
+   "price": null
+  }
+ ]
+}
